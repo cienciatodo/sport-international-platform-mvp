@@ -12,10 +12,10 @@ interface IconProps {
   type: iconTypes | logoTypes;
   iconFolder: iconFolderTypes;
   className?: string;
-  onClick?(): void;
+  
 }
 
-const Icons: FC<IconProps> = ({ type, iconFolder ,className, onClick }): ReactElement => {
+const Icons: FC<IconProps> = ({ type, iconFolder ,className }): ReactElement => {
   return (
 
       <Box
