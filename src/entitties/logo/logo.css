@@ -1,0 +1,147 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.icon {
+  background-size: cover; /* Stretch the image to cover the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  width: 30px; 
+  height: 30px; 
+  background-color: rgb(34, 174, 104);
+}
+
+.icon1{
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: repeat; 
+  width: 14.09px; 
+  height: 15.99px; 
+  background-color: rgb(228, 41, 41);
+}
+
+.icon2{
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: repeat; 
+  width: 12.77px; 
+  height: 16.29px; 
+  background-color: rgb(153, 228, 41);
+
+
+}
+
+.point{
+  background-size: contain;
+  background-repeat: no-repeat; 
+  width: 3.55px; 
+  height: 3.55px; 
+}
+
+.container{
+  display: flex;
+  padding: 0px;
+  width: 129px;
+  height: 32px;
+  cursor:pointer
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.icon2 {
+  background-size: contain;
+  background-repeat: no-repeat; 
+  width: 14.04px; 
+  height: 15.99px;
+  background-color: yellowgreen;
+}
+
+
+
+
+
+.icon3 {
+  background-size: contain;
+  background-repeat: no-repeat; 
+  
+  width: 13.95px; 
+  height: 15.99px; 
+  background-color: chocolate;
+}
+
+.icon5 {
+  background-size: contain;
+  background-repeat: no-repeat; 
+  
+  width: 13.95px; 
+  height: 15.99px; 
+  background-color: chocolate;
+}
+
+.icon6 {
+  background-size: contain;
+  background-repeat: no-repeat; 
+  width: 14.04px; 
+  height: 15.99px;
+  background-color: yellowgreen;
+}
+
+
+
+
+
+.icon7 {
+  background-size: contain;
+  background-repeat: no-repeat; 
+  
+  width: 13.95px; 
+  height: 15.99px; 
+  background-color: chocolate;
+}
+
+.icon8 {
+  background-size: contain;
+  background-repeat: no-repeat; 
+  
+  width: 13.95px; 
+  height: 15.99px; 
+  background-color: chocolate;
+}
+
+
+
+

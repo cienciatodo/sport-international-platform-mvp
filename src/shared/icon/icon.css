@@ -1,0 +1,16 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.containerIcons{
+  background-size: cover; /* Stretch the image to cover the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+
+
+}

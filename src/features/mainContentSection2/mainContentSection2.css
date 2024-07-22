@@ -1,0 +1,150 @@
+/* Main container styles */
+.main-container {
+  background-color: #FFFFFF;
+  width: 765px;
+  padding-top: 28px;
+  border-radius: 20px;
+}
+
+.content-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 28px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  background-color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.header-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #9395B8;
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+}
+
+.header-icon img {
+  width: 3px;
+  height: 3px;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.7px;
+  width: 700px;
+  background-color: #FFFFFF;
+  height: 52px;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.champions-img {
+  margin-bottom: 24px;
+  margin-left: 88.5px;
+}
+
+.moments-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  color: #7B7EA5;
+  
+}
+
+.scroll-container {
+  display: flex;
+  width: 725px;
+  height: 230px;
+  overflow: hidden;
+  cursor: grab;
+  background-color: #FFFFFF;
+  gap:10px;
+  margin-bottom: 24px;
+  margin-top: 24px;
+
+}
+
+.scroll-content {
+  display: flex;
+  width: 2600px;
+  height: 400px;
+  background-color: #FFFFFF;
+  gap: 10px;
+}
+
+.story {
+  width: 173.5px;
+  height: 230px;
+  background-color: turquoise;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: turquoise;
+ 
+}
+
+.story-info {
+  display: inline-flex;
+  background-color: #FFFFFF26;
+  border-radius: 100px;
+  padding: 7px 10px;
+  gap: 4px;
+  margin: 12px 0 0 12px;
+}
+
+.story-info img {
+  display: block;
+}
+
+.story-info-text {
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 548;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+}
+
+.story-duration {
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 548;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  margin: 0 0 10px 10px;
+}
+
+.view-all-button {
+  width: 139px;
+  height: 40px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 548;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  border-radius: 10px;
+  border: none;
+  background-color: #EEF0F7;
+}

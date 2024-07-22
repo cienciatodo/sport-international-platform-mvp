@@ -1,0 +1,17 @@
+
+
+.banner{
+  background-image: linear-gradient(to right, #09043E, #29208B);
+  width: 1160px;
+  height: 320px;
+  border-radius: 16px;
+  
+}
+
+.letterBanner{
+  position: relative;
+  top: 60px;
+  height: 205px;
+  width: 1383.79px;
+
+}

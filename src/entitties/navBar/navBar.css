@@ -1,0 +1,39 @@
+.icon {
+  background-size: contain;
+  background-repeat: no-repeat; 
+  width: 15px; 
+  height: 14.06px; 
+}
+
+
+.navBarLetters{
+  font-family: 'Inter', sans-serif; /* Font */
+  font-weight: 548; /* Weight */
+  font-size: 14px; /* Size */
+  line-height: 20px; /* Line height */
+  letter-spacing: -0.5px; /* Letter spacing */
+  text-align: center; /* Align */
+  font-style: normal; /* Slant: 0 means no slant, so normal style */
+  color: #9395B8;
+}
+
+.navLetters{
+  font-family: 'Inter', sans-serif; /* Font */
+  color: #9395B8;
+  font-weight: 548;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  text-align: center; /* Text alignment */
+  font-style: normal; /* Slant: 0, meaning no slant (not italic) */
+
+
+  
+  
+}
+
+.click{
+ 
+  cursor: pointer;
+}
+
