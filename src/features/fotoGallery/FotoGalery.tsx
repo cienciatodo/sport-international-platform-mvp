@@ -102,27 +102,3 @@ export default FotoGalery;
 
 
 
-
-
-// <DialogBoxPhoto isOpen={true}>
-// <div style={{width:'878px', height:'674px', backgroundColor:'black'}}>
-//   <div>
-
-//   </div>
-//   <div>
-//     <div>
-//     <img src={left}/>
-
-//     </div>
-//     <div>
-//       <img src={run}/>
-      
-
-//     </div>
-//     <div>
-//     <img src={rigth}/>
-
-//     </div>
-//   </div>
-// </div>
-// </DialogBoxPhoto>
