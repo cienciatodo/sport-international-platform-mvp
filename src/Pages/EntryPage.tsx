@@ -72,7 +72,7 @@ const EntryPage = () => {
           </div>
 
         </div>
-        <img src={bicicleta}/>
+        <img src={bicicleta} />
         
       
      

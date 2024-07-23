@@ -6,7 +6,7 @@ import story1 from '../../../public/icons/navigation/story1.png';
 import story2 from '../../../public/icons/navigation/story2.png';
 import story3 from '../../../public/icons/navigation/story3.png';
 import story4 from '../../../public/icons/navigation/story4.png';
-import eye from '../../../public/icons/navigation/eye.svg';
+
 import vector from '../../../public/icons/navigation/Vector.svg';
 import { useRef, useState, MouseEvent } from 'react';
 

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Box, Typography, IconButton, Paper } from '@mui/material';
 import './videoRecorder.css';
 import elipse from '../../../public/images/Banner/letters/Ellipse 27137.svg';
@@ -17,7 +17,7 @@ const VideoRecorder = () => {
         <Typography variant="body2" className="header-text">
           Спортивная Борьба
         </Typography>
-        <Box className="header-icon">
+        <Box className="header-icon" style={{backgroundColor:'white'}} >
           <img src={elipse} alt="Ellipse" />
         </Box>
         <Typography variant="body2" className="header-text">

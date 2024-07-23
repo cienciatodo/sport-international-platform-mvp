@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import elipse from '../../../public/images/Banner/letters/Ellipse 27137.svg';
 import image1 from '../../../public/icons/navigation/fotoa.png';
 import image2 from '../../../public/icons/navigation/fotob.png';
@@ -48,7 +48,7 @@ const FotoGalery = () => {
           </span>
           <div style={{ width: '725px', gap: '12px', backgroundColor: '#FFFFFF', display: 'flex', flexWrap: 'wrap', marginBottom: '16px', marginTop:'20px' }}>
             <img onClick={openDialog} src={image1} style={{ flex: '1 1 30%', maxWidth: 'calc(33.33% - 12px)' , cursor:'pointer'}} />
-            <img src={image2} style={{ flex: '1 1 30%', maxWidth: 'calc(33.33% - 12px)' }} />
+            <img onClick={openDialog} src={image2} style={{ flex: '1 1 30%', maxWidth: 'calc(33.33% - 12px)' , cursor:'pointer'}} />
             <img src={image3} style={{ flex: '1 1 30%', maxWidth: 'calc(33.33% - 12px)' }} />
             <img src={image1} style={{ flex: '1 1 30%', maxWidth: 'calc(33.33% - 12px)' }} />
             <img src={image5} style={{ flex: '1 1 30%', maxWidth: 'calc(33.33% - 12px)' }} />
@@ -72,21 +72,29 @@ const FotoGalery = () => {
           </div>
         </div>
       </div>
-      <div id="dialogBox"></div>
+      <div id="dialogBox" style={{backgroundColor:'khaki', position:'relative', zIndex:'600'}}></div>
       {isDialogOpen && (
         <DialogBoxPhoto isOpen={isDialogOpen}>
-          <div style={{ width: '878px', height: '614px' }}>
-            <div   style={{width:'40px', height:'40px',display:'flex',  position:'relative', top:'13px', left:'690px'}}>
-              <img onClick={closeDialog} src={xClose}  style={{width:'20px', height:'20px', cursor:'pointer' }}/>
-            </div>
+          <div style={{ width: '878px', height: '614px',  position:'relative', zIndex:'100' }}>
+          
+            
+         
+             
+           
+            <img onClick={closeDialog} src={xClose}  style={{width:'20px', height:'20px', cursor:'pointer', marginLeft:'590px'}}/>
+
+            
+           
+            
             <div style={{display:'flex', flexDirection:'row', alignItems:'center', gap:'16px', justifyContent:'center'}} >
               <div >
-                <img src={left} style={{cursor:'pointer'}} />
+                <img onClick={closeDialog} src={left} style={{cursor:'pointer'}} />
               </div>
+              
               <div>
                 <img src={run} style={{width:'500px', height:'450px', borderRadius:'10px'}} />
               </div>
-              <div>
+              <div  style={{cursor:'pointer'}}>
                 <img src={rigth} style={{cursor:'pointer'}}/>
               </div>
             </div>

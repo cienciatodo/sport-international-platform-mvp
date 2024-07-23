@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
 
 interface PropsDialog {
@@ -23,7 +23,7 @@ const DialogBoxPhoto: FC<PropsDialog> = ({ children, isOpen }) => {
   );
 }
 
-const overlayStyle = {
+const overlayStyle: CSSProperties = {
   position: 'fixed',
   top: 0,
   left: 0,
@@ -36,7 +36,7 @@ const overlayStyle = {
   zIndex: 100055,
 };
 
-const dialogStyle = {
+const dialogStyle: CSSProperties = {
   backgroundColor: 'rgba(0, 0, 0, 0)',
   padding: '20px',
   borderRadius: '8px',

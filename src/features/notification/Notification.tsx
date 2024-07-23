@@ -1,11 +1,10 @@
 import sportman from '../../../public/icons/navigation/sportman.png'
-import sportman2 from '../../../public/icons/navigation/sportman2.jpg'
-import russianflag from '../../../public/icons/navigation/russianFlag.svg'
+
 import russia from '../../../public/icons/navigation/russiaround.svg'
 import button from '../../../public/icons/navigation/button.svg'
 import goldIcon from '../../../public/icons/navigation/gold.svg'
 import profilepicture from '../../../public/icons/navigation/profile34.svg'
-import { Profiler } from 'react'
+
 import elipseBlack from '../../../public/icons/navigation/EllipseBlack.svg'
 
 const Notification = () => {

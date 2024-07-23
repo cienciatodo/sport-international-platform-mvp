@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Select, MenuItem, Box, Avatar, IconButton } from '@mui/material';
+import { useState } from 'react';
+import { Select, MenuItem, Box, Avatar, IconButton, SelectChangeEvent } from '@mui/material';
 import russianFlag from '../../../public/icons/navigation/russianFlag.svg';
 import lettersRU from '../../../public/icons/navigation/RU.svg';
 import dropdownIcon from '../../../public/icons/navigation/dropdown.svg';
@@ -13,7 +13,7 @@ const DropdownAndProfile = () => {
   const [language, setLanguage] = useState('RU');
   const [open, setOpen] = useState(false);
 
-  const handleChange = (event) => {
+  const handleChange = (event: SelectChangeEvent<string>) => {
     setLanguage(event.target.value);
     setOpen(false); // Close dropdown on selection
   };
@@ -80,7 +80,6 @@ const DropdownAndProfile = () => {
 };
 
 export default DropdownAndProfile;
-
 
 
 {/* <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>

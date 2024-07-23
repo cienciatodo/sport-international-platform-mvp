@@ -5,9 +5,9 @@ import './navBar.css'
 import house from '../../../public/icons/navigation/house.svg'
 import signal from '../../../public/icons/navigation/signal.svg'
 import people from '../../../public/icons/navigation/people.svg'
-import person from '../../../public/icons/navigation/person.svg'
+
 import houseOrganization from '../../../public/icons/navigation/houseOrganisation.svg'
-import dropdown from '../../../public/icons/navigation/dropdown.svg'
+
 import bag from '../../../public/icons/navigation/bag.svg'
 import trophy from '../../../public/icons/navigation/trophy.svg'
 

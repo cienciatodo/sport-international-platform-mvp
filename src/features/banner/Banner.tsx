@@ -7,10 +7,10 @@ import personLeft from '../../../public/images/Banner/faceImages/leftImage.png'
 import personRight from '../../../public/images/Banner/faceImages/rightImage.png'
 
 import signal from '../../../public/icons/navigation/signal.svg'
-import { pink } from '@mui/material/colors'
+
 import turkmenistanFlag from '../../../public/icons/navigation/flagturkmenistan.svg'
 import russianFlag from '../../../public/icons/navigation/russianFlag.svg'
-import elipseGray from '../../../public/images/Banner/letters/Ellipse 27137.svg'
+
 import { useRef, useState, MouseEvent, useEffect } from 'react'
 import Points from '../../entitties/points/Points'
 
