@@ -9,6 +9,7 @@ import story4 from '../../../public/icons/navigation/story4.png';
 
 import vector from '../../../public/icons/navigation/Vector.svg';
 import { useRef, useState, MouseEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const MainContentSection2 = () => {
   const [isDragging, setIsDragging] = useState(false);
@@ -53,23 +54,25 @@ const MainContentSection2 = () => {
     event.preventDefault();
   };
 
+  const {t } = useTranslation()
+
   return (
     <div className="main-container">
       <div className="content-wrapper">
         <div className="header">
-          <span className="header-text">Спортивная Борьба</span>
+          <span className="header-text">{t("SportWrestling")}</span>
           <div className="header-icon" style={{backgroundColor:'#FFFFFF'}}>
             <img src={elispse} alt="Ellipse" />
           </div>
-          <span className="header-text">12 марта, 2024 в 16:03</span>
+          <span className="header-text">{t("InterviewDate")}</span>
         </div>
         <div className="title">
-          Результаты соревнования по чемпионату 2024 по спортивной борьбе (греко-римская борьба)
+          {t("CompetitionResultsgeneral")}
         </div>
         <div className="champions-img">
           <img src={champions} alt="Champions" />
         </div>
-        <span className="moments-title">Лучшие моменты соревнования</span>
+        <span className="moments-title">{t("BestMoments")}</span>
         <div
           ref={containerRef}
           onMouseDown={mouseGrab}
@@ -87,7 +90,7 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">4.1 тыс.</span>
+                <span className="story-info-text">{t("Viewsgeneral")}</span>
               </div>
               <span className="story-duration">04:15</span>
             </div>
@@ -177,7 +180,7 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">4.1 тыс.</span>
+                <span className="story-info-text">{t("Viewsgeneral")}</span>
               </div>
               <span className="story-duration">04:15</span>
             </div>
@@ -192,7 +195,7 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">4.1 тыс.</span>
+                <span className="story-info-text">{t("Viewsgeneral")}.</span>
               </div>
               <span className="story-duration">04:15</span>
             </div>
@@ -207,7 +210,7 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">4.1 тыс.</span>
+                <span className="story-info-text">{t("Viewsgeneral")}</span>
               </div>
               <span className="story-duration">04:15</span>
             </div>
@@ -222,7 +225,7 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">4.1 тыс.</span>
+                <span className="story-info-text">{t("Viewsgeneral")}</span>
               </div>
               <span className="story-duration">04:15</span>
             </div>
@@ -237,7 +240,7 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">4.1 тыс.</span>
+                <span className="story-info-text">{t("Viewsgeneral")}</span>
               </div>
               <span className="story-duration">04:15</span>
             </div>
@@ -252,7 +255,7 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">4.1 тыс.</span>
+                <span className="story-info-text">{t("Viewsgeneral")}</span>
               </div>
               <span className="story-duration">04:15</span>
             </div>
@@ -267,7 +270,7 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">4.1 тыс.</span>
+                <span className="story-info-text">{t("Viewsgeneral")}</span>
               </div>
               <span className="story-duration">04:15</span>
             </div>
@@ -276,7 +279,7 @@ const MainContentSection2 = () => {
 
 
         </div>
-        <button style={{cursor:'pointer'}} className="view-all-button">Смотреть все</button>
+        <button style={{cursor:'pointer'}} className="view-all-button">{t("ViewAll")}</button>
       </div>
     </div>
   );

@@ -10,12 +10,16 @@ import houseOrganization from '../../../public/icons/navigation/houseOrganisatio
 
 import bag from '../../../public/icons/navigation/bag.svg'
 import trophy from '../../../public/icons/navigation/trophy.svg'
+import { useTranslation } from 'react-i18next'
 
 
 
 
 const NavBar = () => {
+  const {t} =useTranslation()
   return (
+
+   
     <>
 
     <div style={{display:'flex' , gap:'16px'}}>
@@ -24,23 +28,23 @@ const NavBar = () => {
       <div style={{display:'flex', }}>
         <div className='click' style={{display:'flex', padding:'8px',  gap:'10px' , marginRight: '5px'}}>
           <img  src={house} alt="houseIcon" />
-          <span className='navLetters' style={{color:'#06082C'}}>лента</span>
+          <span className='navLetters' style={{color:'#06082C'}}>{t("FeedLabel")}</span>
         </div>
         <div className='click'  style={{display:'flex',  padding:'8px', gap:'10px',marginRight: '5px'}}>
           <img src={bag} alt="houseIcon" style={{cursor:'pointer',}} />
-          <span className='navLetters'>Маркетплейс</span>
+          <span className='navLetters'>{t("MarketplaceLabel")}</span>
         </div>
         <div className='click' style={{display:'flex', padding:'8px',gap:'10px',marginRight: '5px'}}>
           <img src={people} alt="houseIcon" />
-          <span className='navLetters'>Рейтинг</span>
+          <span className='navLetters'>{t( "RatingLabel")}</span>
         </div>
         <div className='click' style={{display:'flex' , padding:'8px', gap:'10px' ,marginRight: '5px'}}>
           <img src={houseOrganization} alt="houseIcon" />
-          <span className='navLetters'>Рейтинг</span>
+          <span className='navLetters'>{t("RatingLabel")}</span>
         </div>
         <div className='click' style={{display:'flex',  padding:'8px', gap:'10px', marginRight: '5px'}}>
           <img src={trophy} alt="houseIcon" />
-          <span className='navLetters'>Организации</span>
+          <span className='navLetters'>{t("OrganizationsLabel")}</span>
         </div>
         <div className='click' style={{display:'flex', padding:'8px', gap:'10px', marginRight: '5px'}}>
           <img src={houseOrganization} alt="houseIcon" />

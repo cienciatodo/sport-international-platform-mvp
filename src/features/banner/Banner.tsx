@@ -13,8 +13,11 @@ import russianFlag from '../../../public/icons/navigation/russianFlag.svg'
 
 import { useRef, useState, MouseEvent, useEffect } from 'react'
 import Points from '../../entitties/points/Points'
+import { useTranslation } from 'react-i18next'
 
 const Banner = () => {
+
+  const {t} =useTranslation()
 
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -42,7 +45,7 @@ const Banner = () => {
     // Cleanup interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
-console.log('isto e o slide:', slide)
+
 
 
 
@@ -164,7 +167,9 @@ console.log('isto e o slide:', slide)
        <div style={{ display:'flex', gap:'8px'}}>
          <img src={turkmenistanFlag}/>
          <span style={{fontFamily:'Inter', fontWeight: '600',color:'#FFFFFF', letterSpacing:'-0.7px',lineHeight: '26px',fontSize:'20px', textAlign:'center' }}>
-         Матвеев
+       
+
+         {t('Matveev')}
          
          </span>
          
@@ -175,7 +180,7 @@ console.log('isto e o slide:', slide)
        <div style={{ height:'26px' ,gap:'8px', display:'flex', alignItems:'center'}}>
          
          <span style={{fontFamily:'Inter', fontWeight: '600', color:'#FFFFFF' , textAlign:'center', letterSpacing:'-0.7px',lineHeight: '26px', fontSize:'20px'}}>
-         Романов
+         {t("Romanov")}
 
          </span>
          <img src={russianFlag} style={{width:'33.23px', height:'24px'}}/>
@@ -185,12 +190,12 @@ console.log('isto e o slide:', slide)
      </div>
      <div style={{display:'flex' , justifyContent:'center'}}>
       <span style={{fontFamily:'Inter', fontWeight:'600', fontSize:'40px', lineHeight:'48.1px', letterSpacing:'-0.4px', textAlign:'center', color:'#FFFFFF'}}>
-       Финальный матч - вольная борьба
+       {t("FinalMatch")}
       </span>
      </div>
      <div style={{display:'flex', justifyContent:'center'}}>
 
-     <button style={{cursor:'pointer',backgroundColor:'#EEF0F7', border:'none', paddingTop:'10px', paddingLeft:'24px', paddingBottom:'10px', paddingRight:'24px', gap:'4px', width:'198px', height:'40px', borderRadius:'10px', fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px'}}>Смотрет транслацию</button>
+     <button style={{cursor:'pointer',backgroundColor:'#EEF0F7', border:'none', paddingTop:'10px', paddingLeft:'24px', paddingBottom:'10px', paddingRight:'24px', gap:'4px', width:'198px', height:'40px', borderRadius:'10px', fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px'}}>{t("WatchLiveStream")}</button>
 
      </div>
 
@@ -236,7 +241,7 @@ console.log('isto e o slide:', slide)
  <div draggable="false" onDragStart={preventDragHandler}  className="banner" style={{display:'flex', justifyContent:'center', alignItems:'center', }}>
    
  <span style={{width:'1160px', display:'flex' , justifyContent:'center', alignItems:'center', color:'#FFFFFF', fontFamily:'Inter', fontWeight:'600', fontSize:'40px', }}>
-    Your advertisment could be here 
+ {t("ads")}
  </span>
    
  </div>
@@ -263,7 +268,7 @@ console.log('isto e o slide:', slide)
  <div draggable="false" onDragStart={preventDragHandler}  className="banner" style={{display:'flex', justifyContent:'center', alignItems:'center', }}>
    
  <span style={{width:'1160px', display:'flex' , justifyContent:'center', alignItems:'center', color:'#FFFFFF', fontFamily:'Inter', fontWeight:'600', fontSize:'40px', }}>
-    Your advertisment could be here 
+ {t("ads")}
  </span>
    
  </div>
@@ -274,7 +279,7 @@ console.log('isto e o slide:', slide)
  <div draggable="false" onDragStart={preventDragHandler}  className="banner" style={{display:'flex', justifyContent:'center', alignItems:'center', }}>
    
    <span style={{width:'1160px', display:'flex' , justifyContent:'center', alignItems:'center', color:'#FFFFFF', fontFamily:'Inter', fontWeight:'600', fontSize:'40px', }}>
-      Your advertisment could be here 
+   {t("ads")}
    </span>
      
    </div>
@@ -286,7 +291,7 @@ console.log('isto e o slide:', slide)
    <div draggable="false" onDragStart={preventDragHandler}  className="banner" style={{display:'flex', justifyContent:'center', alignItems:'center', }}>
    
    <span style={{width:'1160px', display:'flex' , justifyContent:'center', alignItems:'center', color:'#FFFFFF', fontFamily:'Inter', fontWeight:'600', fontSize:'40px', }}>
-      Your advertisment could be here 
+   {t("ads")}
    </span>
      
    </div>

@@ -11,12 +11,15 @@ import eye from  '../../../public/icons/navigation/eye.svg'
 import message from '../../../public/icons/navigation/message-square-02.svg'
 import profile1 from '../../../public/icons/navigation/faceProfile1.svg'
 import profile2 from '../../../public/icons/navigation/profile3.svg'
+import { useTranslation } from 'react-i18next'
 
 import './mainContentSection1.css'
 
 
 
 const MainContentSection1 = () => {
+
+  const{t} = useTranslation()
 
   return(
     <>
@@ -25,20 +28,22 @@ const MainContentSection1 = () => {
         <div style={{display:'flex', flexDirection:'column'}}>
           <div style={{display:'flex', flexDirection:'row', gap:'6px', backgroundColor:'#FFFFFF', marginBottom:'12px'}}>
             <span style={{fontFamily:'Inter', fontWeight:'400' , fontSize:'12px',color:'#9395B8'}}>
-              Спортивная Борьба
+
+              {t("SportWrestling")}
+
             </span>
             <div style={{display:'flex', alignItems:'center',justifyContent:'center', backgroundColor:'white'}}>
               <img src={elipse} style={{ width:'3px', height:'3px' }} />            
             </div>
             <span style={{fontFamily:'Inter', fontWeight:'400' , fontSize:'12px',color:'#9395B8'}}>
-              12 марта, 2024 в 16:03
+              {t("InterviewDate")}
             </span> 
           </div>
           <span style={{fontFamily:'Inter', fontWeight:'600', fontSize:'20px',lineHeight:'26px', letterSpacing:'-0.7px', marginBottom:'20px' }}>
-            Илья Бессонов дал интервью для телеканала Россия-1
+            {t("InterviewTitle")}
           </span>
           <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px',letterSpacing:'-0.5px', width:'725px', marginBottom:'20px'}}>
-          Илья Бессонов дал интервью после большого перерыва, где поделился секретом своего успеха и рассказал о методиках своих тренировок. Спортсмен сделал заявление, что возвращается в спорт и ...<button style={{fontFamily:'Inter', fontWeight:'548', fontSize:'14px' , letterSpacing:'-0.5px', lineHeight:'20px', textAlign:'center', backgroundColor:'#FFFFFF', border:'none', cursor:'pointer'}}>Читать больше</button>
+          {t("InterviewContent")}<button style={{fontFamily:'Inter', fontWeight:'548', fontSize:'14px' , letterSpacing:'-0.5px', lineHeight:'20px', textAlign:'center', backgroundColor:'#FFFFFF', border:'none', cursor:'pointer'}}>{t("ReadMore")}</button>
           </span>
         </div>
         <div style={{width:'725px',alignContent:'space-between',gap:'10px' , backgroundColor:'#FFFFFF', display:'flex', flexWrap:'wrap', marginBottom:'16px'}}>
@@ -53,7 +58,7 @@ const MainContentSection1 = () => {
           <div style={{display:'flex', alignItems:'center'}} >
             <img src={eye}/>
             <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px',color:'#7B7EA5'}}>
-              4.1 K
+              {t("Views")}
             </span>
           </div>
          
@@ -74,9 +79,9 @@ const MainContentSection1 = () => {
             <div style={{backgroundColor:'#FFFFFF', display:'flex', alignItems:'flex-start', gap:'12px', marginBottom:'16px'}}>
               <img src={profile1}/>
               <div style={{display:'flex', flexDirection:'column'}}>
-                <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#7B7EA5', marginBottom:'4px'}}> Вадим Давыдов </span>
+                <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#7B7EA5', marginBottom:'4px'}}> {t("VadimDavydov")}  </span>
                 <span style={{fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', marginBottom:'8px'}}>Наконец-то! Рад, что он вернулся в спорт</span>
-                <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#9395B8'}}>15 минут назад <span style={{color:'#353754'}}>Ответить</span></span>
+                <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#9395B8'}}>{t( "TimeAgo")} <span style={{color:'#353754'}}>Ответить</span></span>
               </div>
 
             </div>
@@ -85,7 +90,7 @@ const MainContentSection1 = () => {
               <div style={{display:'flex', flexDirection:'column'}}>
               <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#7B7EA5', marginBottom:'4px'}}> Вадим Давыдов </span>
                 <span style={{fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', marginBottom:'8px'}}>Наконец-то! Рад, что он вернулся в спорт</span>
-                <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#9395B8'}}>15 минут назад <span style={{color:'#353754'}}>Ответить</span></span>
+                <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#9395B8'}}><span style={{color:'#353754'}}>Ответить</span></span>
                
               </div>
 
@@ -100,7 +105,7 @@ const MainContentSection1 = () => {
               <div style={{display:'flex', flexDirection:'column'}}>
                 <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#7B7EA5', marginBottom:'4px'}}> Вадим Давыдов </span>
                 <span style={{fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', marginBottom:'8px'}}>Наконец-то! Рад, что он вернулся в спорт</span>
-                <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#9395B8'}}>15 минут назад <span style={{color:'#353754'}}>Ответить</span></span>
+                <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#9395B8'}}>{t( "TimeAgo")} <span style={{color:'#353754'}}>Ответить</span></span>
               </div>
             </div>
 
@@ -112,7 +117,7 @@ const MainContentSection1 = () => {
               <div style={{display:'flex', flexDirection:'column'}}>
                 <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#7B7EA5', marginBottom:'4px'}}> Вадим Давыдов </span>
                 <span style={{fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', marginBottom:'8px'}}>Наконец-то! Рад, что он вернулся в спорт</span>
-                <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#9395B8'}}>15 минут назад <span style={{color:'#353754'}}>Ответить</span></span>
+                <span style={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#9395B8'}}>{t("CommentTime")} <span style={{color:'#353754'}}>{t("Reply")}</span></span>
               </div>
             </div>
         </div>
@@ -120,7 +125,7 @@ const MainContentSection1 = () => {
       </div>
       <div style={{paddingBottom:'28px'}}>
         <button style={{cursor:'pointer',width:'232px', height:'40px', gap:'4px', paddingTop:'10px',paddingBottom:'10px', paddingLeft:'24px', paddingRight:'24px', borderRadius:'10px', backgroundColor:'#EEF0F7', border:'none', fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', textAlign:'center', }}>
-           Смотреть все комментарии
+           {t("SeeAllComments")}
         </button>
 
       </div>

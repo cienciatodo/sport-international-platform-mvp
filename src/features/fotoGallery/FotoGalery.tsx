@@ -13,6 +13,7 @@ import rigth from '../../../public/icons/navigation/rigthButton.svg';
 import run from '../../../public/icons/navigation/great1.png';
 
 import xClose from '../../../public/icons/navigation/x-close.svg'
+import { useTranslation } from 'react-i18next';
 
 const FotoGalery = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -24,27 +25,27 @@ const FotoGalery = () => {
   const closeDialog = () => {
     setIsDialogOpen(false);
   };
-
+const {t} = useTranslation()
   return (
     <>
       <div style={{ width: '765px', backgroundColor: '#FFFFFF', borderRadius:'20px' }}>
         <div style={{ padding: '20px' }}>
           <div style={{ display: 'flex', flexDirection: 'row', gap: '6px', backgroundColor: '#FFFFFF', marginBottom: '12px' }}>
             <span style={{ fontFamily: 'Inter', fontWeight: '400', fontSize: '12px', color: '#9395B8' }}>
-              Велоспорт
+              {t("Cycling")}
             </span>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',  backgroundColor:'white' }}>
               <img src={elipse} style={{ width: '3px', height: '3px' }} />
             </div>
             <span style={{ fontFamily: 'Inter', fontWeight: '400', fontSize: '12px', color: '#9395B8' }}>
-              2 февраля, 2024 в 23:09
+             {t("EventDategeneral")}
             </span>
           </div>
           <span style={{ fontFamily: 'Inter', fontWeight: '600', fontSize: '20px', lineHeight: '26px', letterSpacing: '-0.7px', }}>
-            Этапы Тура Альп-2024
+            {t("TourStages")}
           </span>
           <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '14px', lineHeight: '20px', letterSpacing: '-0.5px' }}>
-            Фото с соревнований
+            {t("CompetitionPhotos")}
           </span>
           <div style={{ width: '725px', gap: '12px', backgroundColor: '#FFFFFF', display: 'flex', flexWrap: 'wrap', marginBottom: '16px', marginTop:'20px' }}>
             <img onClick={openDialog} src={image1} style={{ flex: '1 1 30%', maxWidth: 'calc(33.33% - 12px)' , cursor:'pointer'}} />

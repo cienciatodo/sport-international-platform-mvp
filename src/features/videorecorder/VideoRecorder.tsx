@@ -7,15 +7,19 @@ import message from '../../../public/icons/navigation/message-square-02.svg';
 import eye from '../../../public/icons/navigation/eye.svg';
 import profile1 from '../../../public/icons/navigation/faceProfile1.svg';
 import play1 from '../../../public/icons/navigation/play1.svg';
+import { useTranslation } from 'react-i18next';
 
 const VideoRecorder = () => {
+
+  const {t} =useTranslation();
+
   return (
     
       <Box className="video-recorder-container">
         <Box style={{paddingLeft: '20px'}}>
       <Box className="video-recorder-header" >
         <Typography variant="body2" className="header-text">
-          Спортивная Борьба
+          {t("SportsWrestling")}
         </Typography>
         <Box className="header-icon" style={{backgroundColor:'white'}} >
           <img src={elipse} alt="Ellipse" />
@@ -25,7 +29,7 @@ const VideoRecorder = () => {
         </Typography>
       </Box>
       <Typography variant="h6" className="video-recorder-title" style={{fontSize:'20px', fontWeight:'600', marginBottom:'24px'}}>
-        Запись соревнования по вольной борьбе в Санкт-Петербурге
+        {t("EventDescription")}
       </Typography>
       <Paper
         className="video-container"
@@ -55,13 +59,13 @@ const VideoRecorder = () => {
           <img src={profile1} alt="Profile" />
           <Box className="comment-content">
             <Typography variant="body2" className="comment-name">
-              Вадим Давыдов
+              {t("ProfileName")}
             </Typography>
             <Typography variant="body2" className="comment-text">
               Наконец-то! Рад, что он вернулся в спорт
             </Typography>
             <Typography variant="body2" className="comment-time">
-              15 минут назад <span>Ответить</span>
+              {t("TimeAgo")} <span>{t( "ReplyText")}</span>
             </Typography>
           </Box>
         </Paper>
