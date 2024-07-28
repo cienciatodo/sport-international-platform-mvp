@@ -1,0 +1,39 @@
+/* General styling for the button */
+.button {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none; /* Remove default border */
+  background: transparent; /* Set a default background */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Styling when the button is focused */
+.button:focus {
+  outline: none; /* Remove the default focus outline */
+}
+
+/* Styling when the button is focused and for its child elements */
+
+
+/* Ensure SVG path stroke color changes when button is focused */
+.button:focus path {
+  stroke: #06082C /* Change stroke color to red */
+}
+
+/* Ensure text color changes when button is focused */
+.button:focus .navLetters {
+  color: #06082C /* Change text color to red */
+}
+
+.navLetters{
+  font-family: Inter;
+  font-weight: 548;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: #9395B8;
+
+}

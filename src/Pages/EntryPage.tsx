@@ -1,97 +1,95 @@
-
-import Header from "../features/header/Header"
-import Banner from "../features/banner/Banner"
-
-import './entryPage.css'
-import MainContentSection1 from "../features/mainContentSection1/mainContentSection1"
-import MainContentSection2 from "../features/mainContentSection2/MainContentSection2"
-import BannerAdvertisment from "../features/bannerAdvertisment/BannerAdvertisment"
-import Notification from "../features/notification/Notification"
-import Accounts from "../features/accounts/Accounts"
-import FotoGalery from "../features/fotoGallery/FotoGalery"
+import React from 'react';
+import Header from "../features/header/Header";
+import Banner from "../features/banner/Banner";
+import './entryPage.css';
+import MainContentSection1 from "../features/mainContentSection1/mainContentSection1";
+import MainContentSection2 from "../features/mainContentSection2/MainContentSection2";
+import BannerAdvertisment from "../features/bannerAdvertisment/BannerAdvertisment";
+import Notification from "../features/notification/Notification";
+import Accounts from "../features/accounts/Accounts";
+import FotoGalery from "../features/fotoGallery/FotoGalery";
 import VideoRecorder from "../features/videorecorder/VideoRecorder";
-
-
-
-import all from '../../public/icons/navigation/ka.svg'
-
-import all1 from '../../public/icons/navigation/ke.svg'
-
-import all2 from '../../public/icons/navigation/ki.svg'
-
-import all3 from '../../public/icons/navigation/ko.svg'
-
-import bicicleta from '../../public/icons/navigation/bicicleta.png'
-import { useTranslation } from "react-i18next"
+import bicicleta from '../../public/icons/navigation/bicicleta.png';
+import FunFacts from "../features/funFacts/FunFacts";
+import LastNews from "../features/lastNews/LastNews";
+import RightSectionOne from "../features/rigthSectionOne/RightSectionOne";
+import { Box, useTheme, useMediaQuery, Avatar } from '@mui/material';
 
 const EntryPage = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const {t} = useTranslation()
-  return(
-    <>    
-    <Header/>
-    <div style={{height:'1000vh', backgroundColor:'#f5f1f7', display:'flex', flexDirection:'row'}}>
-      <div className="mainPage">
-            <Banner/>
-            <MainContentSection1/>
-            <MainContentSection2/>
-            <BannerAdvertisment/>
-            <Notification/>
-            <Accounts/>
-            <FotoGalery/>
-            <VideoRecorder/>
-      </div>
-      <div style={{position:'relative', top:'457px', left:'-231px'}}>
+
+  return (
+    <>
+      <Header />
+      <Box
+        sx={{
+          height: '1000vh',
+          backgroundColor: '#f5f1f7',
+          display: 'flex',
+          flexDirection: { xs: 'column-reverse', sm: 'row' },
+          marginTop:{sx: '1020px'}
+        }}
+      >
+        <Box className="mainPage" sx={{ width: { xs: 'auto', sm: 'auto' } }}>
+          <Banner />
+          {!isSmallScreen && <MainContentSection1/> }
+          {!isSmallScreen && <MainContentSection2/> }
+          {!isSmallScreen && <BannerAdvertisment/> }
+          {!isSmallScreen && <Notification/> }
+          {!isSmallScreen && <Accounts/>}
+          {!isSmallScreen && <FotoGalery/> }
+          {!isSmallScreen && <VideoRecorder/>}
+
+        </Box>
         
-        <div style={{backgroundColor:'white', width:'331px', height:'245px', borderRadius:'20px', paddingTop:'24px', paddingBottom:'24px', paddingLeft:'20px', paddingRight:'20px', marginBottom:'24px' }}>
 
-      
-          <span style={{fontFamily:'Inter', fontWeight:'600', fontSize:'20px', lineHeight:'26px', letterSpacing:'-0.7px', }}>          
-           {t('PageFilter')}
-
-          </span>
-          <div style={{display:'flex', flexDirection:'column', marginTop:'24px', gap:'12px'}}>
-            <button style={{cursor:'pointer', backgroundColor:'#EEF0F7', height:'40px', border:'none', borderRadius:'10px', display:'flex', alignItems:'center', padding:'10px', gap:'12px'}}>
-              <img src={all}/>
-              <span style={{fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', textAlign:'center', color:'#06082C',}}>
-                {t('All')}
-              </span>
-            </button>
-            <button style={{ cursor:'pointer',backgroundColor:'#FFFFFF',  height:'40px', border:'none',borderRadius:'10px', display:'flex', alignItems:'center', padding:'10px', gap:'12px'}}>
-            <img src={all1}/>
-              <span style={{fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', textAlign:'center', color:'#7B7EA5', }}>
-              
-              {t('CompetitionResults')}
-              </span>
-            </button>
-            <button  style={{backgroundColor:'#FFFFFF',  height:'40px', border:'none',borderRadius:'10px', display:'flex', alignItems:'center', padding:'10px', gap:'12px', cursor:'pointer'}}>
-            <img src={all2}/>
-              <span style={{fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', textAlign:'center', color:'#7B7EA5'}}>
-           
-              {t('Video')}
-              </span>
-            </button>
-            <button  style={{cursor:'pointer',backgroundColor:'#FFFFFF',  height:'40px', border:'none',borderRadius:'10px', display:'flex', alignItems:'center', padding:'10px', gap:'12px'}}>
-            <img src={all3}/>
-              <span style={{fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', textAlign:'center', color:'#7B7EA5'}}>
+       
+        <Box
+          sx={{
+            position: { xs: 'static', sm: 'relative' },
+            top: { sm: '457px', xs: '0px' },
+            left: { sm: '-231px' },
+            width: { xs: '100%', sm: 'auto' },
+            marginTop:{xs:'80px', sm:'0px'},
+          
+            backgroundColor:{sm:'red', xs:'purple'},
+            display:{xs:'flex'},
+            flexDirection:{xs:'column'},
             
-              {t('Achievements')}
-              </span>
-            </button>
-          </div>
-
-        </div>
-        <img src={bicicleta} />
-        
-      
+          
      
-    
-      </div>
-    </div>
+            
+          
 
+          }}
+        >
+          <Box sx={{
+            paddingLeft:{xs:'20px', sm:'0px'},
+            paddingRight:{xs:'20px', sm:'0px'}
+          }}>
+
+         
+          <RightSectionOne />
+          {isSmallScreen && <MainContentSection1/>}
+       
+          <Box component="img" src={bicicleta} alt={`ads}`} sx={{width:{xs:'350px', sm:'auto'},marginBottom:'20px' }} />
+          <FunFacts />
+          <LastNews />
+          {isSmallScreen && <MainContentSection2/>}
+          {isSmallScreen && <BannerAdvertisment/>}
+          {isSmallScreen && <Notification/>}
+          {isSmallScreen && <Accounts/>}
+          {isSmallScreen && <FotoGalery/>}
+          {isSmallScreen && <VideoRecorder/>}
+
+          </Box>
+        </Box>
+        </Box>
+      
     </>
-  )
+  );
+};
 
-}
-
-export default  EntryPage
+export default EntryPage;

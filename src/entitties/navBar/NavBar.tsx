@@ -1,71 +1,82 @@
-
-import Logo from '../logo/Logo'
-
-import './navBar.css'
-import house from '../../../public/icons/navigation/house.svg'
-import signal from '../../../public/icons/navigation/signal.svg'
-import people from '../../../public/icons/navigation/people.svg'
-
-import houseOrganization from '../../../public/icons/navigation/houseOrganisation.svg'
-
-import bag from '../../../public/icons/navigation/bag.svg'
-import trophy from '../../../public/icons/navigation/trophy.svg'
-import { useTranslation } from 'react-i18next'
-
-
-
+import React from 'react';
+import Logo from '../logo/Logo';
+import './navBar.css';
+import { useTranslation } from 'react-i18next';
+import SingleNavBarElement from '../singleNavBarElement/SingleNavBarElement';
+import { bag, trophy, people, network, house, bank } from '../constants/svgPathConstants';
+import { Hidden } from '@mui/material';
 
 const NavBar = () => {
-  const {t} =useTranslation()
+  const { t } = useTranslation();
+
+  const marketList = ['About', 'Our History', 'Headquarter', 'Best Cases'];
+  const profileList = ['information 1', 'information 2', 'information 3', 'information 4', 'information 5'];
+  const competitionsList = [
+    'Premier League',
+    'FIFA World Cup',
+    'UEFA Champions League',
+    'NBA Finals',
+    'Wimbledon',
+    'Super Bowl',
+    'The Masters',
+    'Tour de France',
+    'Formula 1 World Championship',
+    'Cricket World Cup'
+  ];
+
+  const feedList = [
+    'Latest News',
+    'Match Reports',
+    'Player Interviews',
+    'Team Updates',
+    'Injury Updates',
+    'Transfer News',
+    'Game Recaps',
+    'Fan Posts',
+    'Opinion Articles',
+    'Video Highlights'
+  ];
+
+  const liveList = [
+    'Live Match Scores',
+    'Live Commentary',
+    'Live Streaming',
+    'Live Player Stats',
+    'Live Game Highlights',
+    'Live Fan Reactions',
+    'Live Updates',
+    'Live Team Stats',
+    'Live Interviews',
+    'Live Event Schedules'
+  ];
+
+  const organizationList = [
+    'International Olympic Committee (IOC)',
+    'NHL (National Hockey League)',
+    'ICC (International Cricket Council)',
+    'ATP (Association of Tennis Professionals)',
+  ];
+
   return (
-
-   
     <>
-
-    <div style={{display:'flex' , gap:'16px'}}>
-      <Logo/>
-
-      <div style={{display:'flex', }}>
-        <div className='click' style={{display:'flex', padding:'8px',  gap:'10px' , marginRight: '5px'}}>
-          <img  src={house} alt="houseIcon" />
-          <span className='navLetters' style={{color:'#06082C'}}>{t("FeedLabel")}</span>
-        </div>
-        <div className='click'  style={{display:'flex',  padding:'8px', gap:'10px',marginRight: '5px'}}>
-          <img src={bag} alt="houseIcon" style={{cursor:'pointer',}} />
-          <span className='navLetters'>{t("MarketplaceLabel")}</span>
-        </div>
-        <div className='click' style={{display:'flex', padding:'8px',gap:'10px',marginRight: '5px'}}>
-          <img src={people} alt="houseIcon" />
-          <span className='navLetters'>{t( "RatingLabel")}</span>
-        </div>
-        <div className='click' style={{display:'flex' , padding:'8px', gap:'10px' ,marginRight: '5px'}}>
-          <img src={houseOrganization} alt="houseIcon" />
-          <span className='navLetters'>{t("RatingLabel")}</span>
-        </div>
-        <div className='click' style={{display:'flex',  padding:'8px', gap:'10px', marginRight: '5px'}}>
-          <img src={trophy} alt="houseIcon" />
-          <span className='navLetters'>{t("OrganizationsLabel")}</span>
-        </div>
-        <div className='click' style={{display:'flex', padding:'8px', gap:'10px', marginRight: '5px'}}>
-          <img src={houseOrganization} alt="houseIcon" />
-          <span className='navLetters'>Live</span>
-        </div>
-        <div className='click' style={{display:'flex' , padding:'8px', gap:'10px', marginRight: '5px'}}>
-          <img src={signal} alt="houseIcon" />
-          <span className='navLetters'>Live</span>
-        </div>
+      <div style={{ display: 'flex' }}>
+        <Logo />
+        <Hidden smDown>
+          <div style={{ display: 'flex', gap: '16px' }}>
+            <SingleNavBarElement svgPath={house} innerText={t('FeedLabel')} className='bag' OptionDropdownList={feedList} />
+            <SingleNavBarElement svgPath={bag} innerText={t("MarketplaceLabel")} className='bag' OptionDropdownList={marketList} />
+            <SingleNavBarElement svgPath={people} innerText={t("RatingLabel")} className='bag' OptionDropdownList={profileList} />
+            <SingleNavBarElement svgPath={trophy} innerText={t("Competition")} className='bag' OptionDropdownList={competitionsList} />
+            <SingleNavBarElement svgPath={bank} innerText={t("OrganizationsLabel")} className='bag' OptionDropdownList={organizationList} />
+            <SingleNavBarElement svgPath={network} innerText={t("LiveLabel")} className='bag' OptionDropdownList={liveList} />
+          </div>
+        </Hidden>
       </div>
-
-
-    </div>
-
-
     </>
-  )
-
+  );
 }
 
-export default NavBar
+export default NavBar;
 
 
 

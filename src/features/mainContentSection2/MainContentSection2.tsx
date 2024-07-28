@@ -10,6 +10,7 @@ import story4 from '../../../public/icons/navigation/story4.png';
 import vector from '../../../public/icons/navigation/Vector.svg';
 import { useRef, useState, MouseEvent } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Box, Button, Typography } from '@mui/material';
 
 const MainContentSection2 = () => {
   const [isDragging, setIsDragging] = useState(false);
@@ -57,22 +58,22 @@ const MainContentSection2 = () => {
   const {t } = useTranslation()
 
   return (
-    <div className="main-container">
-      <div className="content-wrapper">
-        <div className="header">
-          <span className="header-text">{t("SportWrestling")}</span>
-          <div className="header-icon" style={{backgroundColor:'#FFFFFF'}}>
+    <Box className="main-container"  >
+      <Box className="content-wrapper" >
+        <Box className="header" >
+          <Typography className="header-text" sx={{fontSize:'12px', color:'#9395B8'}}>{t("SportWrestling")}</Typography>
+          <Box className="header-icon" style={{backgroundColor:'#FFFFFF'}}>
             <img src={elispse} alt="Ellipse" />
-          </div>
-          <span className="header-text">{t("InterviewDate")}</span>
-        </div>
-        <div className="title">
+          </Box>
+          <Typography className="header-text" sx={{fontSize:'12px', color:'#9395B8'}}>{t("InterviewDate")}</Typography>
+        </Box>
+        <Box className="title">
           {t("CompetitionResultsgeneral")}
-        </div>
-        <div className="champions-img">
-          <img src={champions} alt="Champions" />
-        </div>
-        <span className="moments-title">{t("BestMoments")}</span>
+        </Box>
+        <Box className="champions-img" sx={{}}>
+          <Box component="img" src={champions} alt="Champions" sx={{width:{sm:'600px', xs: '303px'}, marginLeft:{xs:'-85px', sm:'0px'}, marginTop:{xs:'-30px'}}}/>
+        </Box>
+        <Typography className="moments-title" sx={{fontFamily:'Inter', fontSize:'14px', fontWeight:'500',lineHeight:'20px', letterSpacing:'-0.5px',backgroundColor:'red' }}>{t("BestMoments")}</Typography>
         <div
           ref={containerRef}
           onMouseDown={mouseGrab}
@@ -81,7 +82,7 @@ const MainContentSection2 = () => {
           onMouseMove={handleMouseMove}
           className="scroll-container"
         >
-          <div className="scroll-content">
+          <Box className="scroll-content">
             <div
               draggable="false"
               onDragStart={preventDragHandler}
@@ -90,11 +91,71 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">{t("Viewsgeneral")}</span>
+                <Typography className="story-info-text">{t("Viewsgeneral")}</Typography>
               </div>
-              <span className="story-duration">04:15</span>
+              <Typography className="story-duration">04:15</Typography>
             </div>
+          </Box>
+
+          <Box className="scroll-content">
+            <Box
+              draggable="false"
+              onDragStart={preventDragHandler}
+              className="story"
+              style={{ backgroundImage: `url(${story2})` }}
+            >
+              <Box className="story-info">
+                <img src={vector} alt="Vector" />
+                <Typography className="story-info-text">392</Typography>
+              </Box>
+              <Typography className="story-duration">03:10</Typography>
+            </Box>
+          </Box>
+
+          <div className="scroll-content">
+            <Box
+              draggable="false"
+              onDragStart={preventDragHandler}
+              className="story"
+              style={{ backgroundImage: `url(${story3})` }}
+            >
+              <Box className="story-info">
+                <img src={vector} alt="Vector" />
+                <Typography className="story-info-text">72.8 тыс..</Typography>
+              </Box>
+              <Typography className="story-duration">02:01</Typography>
+            </Box>
           </div>
+
+          <Box className="scroll-content">
+            <Box
+              draggable="false"
+              onDragStart={preventDragHandler}
+              className="story"
+              style={{ backgroundImage: `url(${story4})` }}
+            >
+              <Box className="story-info">
+                <img src={vector} alt="Vector" />
+                <Typography className="story-info-text">5</Typography>
+              </Box>
+              <Typography className="story-duration">00:56</Typography>
+            </Box>
+          </Box>
+
+          <Box className="scroll-content">
+            <Box
+              draggable="false"
+              onDragStart={preventDragHandler}
+              className="story"
+              style={{ backgroundImage: `url(${story1})` }}
+            >
+              <div className="story-info">
+                <img src={vector} alt="Vector" />
+                <Typography className="story-info-text">4.1 тыс.</Typography>
+              </div>
+              <Typography className="story-duration">04:15</Typography>
+            </Box>
+          </Box>
 
           <div className="scroll-content">
             <div
@@ -105,9 +166,9 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">392</span>
+                <Typography className="story-info-text">4.1 тыс.</Typography>
               </div>
-              <span className="story-duration">03:10</span>
+              <Typography className="story-duration">04:15</Typography>
             </div>
           </div>
 
@@ -120,9 +181,9 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">72.8 тыс..</span>
+                <Typography className="story-info-text">{t("Viewsgeneral")}</Typography>
               </div>
-              <span className="story-duration">02:01</span>
+              <Typography className="story-duration">04:15</Typography>
             </div>
           </div>
 
@@ -135,9 +196,9 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">5</span>
+                <Typography className="story-info-text">{t("Viewsgeneral")}.</Typography>
               </div>
-              <span className="story-duration">00:56</span>
+              <Typography className="story-duration">04:15</Typography>
             </div>
           </div>
 
@@ -150,9 +211,9 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">4.1 тыс.</span>
+                <Typography className="story-info-text">{t("Viewsgeneral")}</Typography>
               </div>
-              <span className="story-duration">04:15</span>
+              <Typography className="story-duration">04:15</Typography>
             </div>
           </div>
 
@@ -165,9 +226,9 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">4.1 тыс.</span>
+                <Typography className="story-info-text">{t("Viewsgeneral")}</Typography>
               </div>
-              <span className="story-duration">04:15</span>
+              <Typography className="story-duration">04:15</Typography>
             </div>
           </div>
 
@@ -180,9 +241,9 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">{t("Viewsgeneral")}</span>
+                <Typography className="story-info-text">{t("Viewsgeneral")}</Typography>
               </div>
-              <span className="story-duration">04:15</span>
+              <Typography className="story-duration">04:15</Typography>
             </div>
           </div>
 
@@ -195,13 +256,13 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">{t("Viewsgeneral")}.</span>
+                <Typography className="story-info-text">{t("Viewsgeneral")}</Typography>
               </div>
-              <span className="story-duration">04:15</span>
+              <Typography className="story-duration">04:15</Typography>
             </div>
           </div>
 
-          <div className="scroll-content">
+          <div className="scroll-content" >
             <div
               draggable="false"
               onDragStart={preventDragHandler}
@@ -210,78 +271,18 @@ const MainContentSection2 = () => {
             >
               <div className="story-info">
                 <img src={vector} alt="Vector" />
-                <span className="story-info-text">{t("Viewsgeneral")}</span>
+                <Typography className="story-info-text">{t("Viewsgeneral")}</Typography>
               </div>
-              <span className="story-duration">04:15</span>
-            </div>
-          </div>
-
-          <div className="scroll-content">
-            <div
-              draggable="false"
-              onDragStart={preventDragHandler}
-              className="story"
-              style={{ backgroundImage: `url(${story2})` }}
-            >
-              <div className="story-info">
-                <img src={vector} alt="Vector" />
-                <span className="story-info-text">{t("Viewsgeneral")}</span>
-              </div>
-              <span className="story-duration">04:15</span>
-            </div>
-          </div>
-
-          <div className="scroll-content">
-            <div
-              draggable="false"
-              onDragStart={preventDragHandler}
-              className="story"
-              style={{ backgroundImage: `url(${story3})` }}
-            >
-              <div className="story-info">
-                <img src={vector} alt="Vector" />
-                <span className="story-info-text">{t("Viewsgeneral")}</span>
-              </div>
-              <span className="story-duration">04:15</span>
-            </div>
-          </div>
-
-          <div className="scroll-content">
-            <div
-              draggable="false"
-              onDragStart={preventDragHandler}
-              className="story"
-              style={{ backgroundImage: `url(${story4})` }}
-            >
-              <div className="story-info">
-                <img src={vector} alt="Vector" />
-                <span className="story-info-text">{t("Viewsgeneral")}</span>
-              </div>
-              <span className="story-duration">04:15</span>
-            </div>
-          </div>
-
-          <div className="scroll-content">
-            <div
-              draggable="false"
-              onDragStart={preventDragHandler}
-              className="story"
-              style={{ backgroundImage: `url(${story1})` }}
-            >
-              <div className="story-info">
-                <img src={vector} alt="Vector" />
-                <span className="story-info-text">{t("Viewsgeneral")}</span>
-              </div>
-              <span className="story-duration">04:15</span>
+              <Typography className="story-duration" sx={{marginRight:'60px'}}>04:15</Typography>
             </div>
           </div>
 
 
 
         </div>
-        <button style={{cursor:'pointer'}} className="view-all-button">{t("ViewAll")}</button>
-      </div>
-    </div>
+        <Button sx={{textTransform:'none',borderRadius:'10px',cursor:'pointer', backgroundColor:'#EEF0F7', color:'#06082C', fontFamily:'Inter', width:{xs:'100%', sm:'auto'}}} className="view-all-button" >{t("ViewAll")}</Button>
+      </Box>
+    </Box>
   );
 };
 

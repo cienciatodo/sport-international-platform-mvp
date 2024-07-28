@@ -14,6 +14,7 @@ import run from '../../../public/icons/navigation/great1.png';
 
 import xClose from '../../../public/icons/navigation/x-close.svg'
 import { useTranslation } from 'react-i18next';
+import { Avatar, Box, IconButton, Typography } from '@mui/material';
 
 const FotoGalery = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -25,81 +26,101 @@ const FotoGalery = () => {
   const closeDialog = () => {
     setIsDialogOpen(false);
   };
-const {t} = useTranslation()
+  
+  const { t } = useTranslation();
+
   return (
     <>
-      <div style={{ width: '765px', backgroundColor: '#FFFFFF', borderRadius:'20px' }}>
-        <div style={{ padding: '20px' }}>
-          <div style={{ display: 'flex', flexDirection: 'row', gap: '6px', backgroundColor: '#FFFFFF', marginBottom: '12px' }}>
-            <span style={{ fontFamily: 'Inter', fontWeight: '400', fontSize: '12px', color: '#9395B8' }}>
+      <Box sx={{ width: { sm: '765px', xs: 'auto' }, backgroundColor: '#ff0000', borderRadius: '20px' }}>
+        <Box sx={{ padding: '20px' }}>
+          <Box sx={{ display: 'flex', flexDirection: 'row', gap: '6px', backgroundColor: '#FFFFFF', marginBottom: '12px' }}>
+            <Typography sx={{ fontFamily: 'Inter', fontWeight: '400', fontSize: '12px', color: '#9395B8' }}>
               {t("Cycling")}
-            </span>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',  backgroundColor:'white' }}>
+            </Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'white' }}>
               <img src={elipse} style={{ width: '3px', height: '3px' }} />
-            </div>
-            <span style={{ fontFamily: 'Inter', fontWeight: '400', fontSize: '12px', color: '#9395B8' }}>
-             {t("EventDategeneral")}
-            </span>
-          </div>
-          <span style={{ fontFamily: 'Inter', fontWeight: '600', fontSize: '20px', lineHeight: '26px', letterSpacing: '-0.7px', }}>
+            </Box>
+            <Typography sx={{ fontFamily: 'Inter', fontWeight: '400', fontSize: '12px', color: '#9395B8' }}>
+              {t("EventDategeneral")}
+            </Typography>
+          </Box>
+          <Typography sx={{ fontFamily: 'Inter', fontWeight: '600', fontSize: '20px', lineHeight: '26px', letterSpacing: '-0.7px' }}>
             {t("TourStages")}
-          </span>
-          <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '14px', lineHeight: '20px', letterSpacing: '-0.5px' }}>
+          </Typography>
+          <Typography sx={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '14px', lineHeight: '20px', letterSpacing: '-0.5px' }}>
             {t("CompetitionPhotos")}
-          </span>
-          <div style={{ width: '725px', gap: '12px', backgroundColor: '#FFFFFF', display: 'flex', flexWrap: 'wrap', marginBottom: '16px', marginTop:'20px' }}>
-            <img onClick={openDialog} src={image1} style={{ flex: '1 1 30%', maxWidth: 'calc(33.33% - 12px)' , cursor:'pointer'}} />
-            <img onClick={openDialog} src={image2} style={{ flex: '1 1 30%', maxWidth: 'calc(33.33% - 12px)' , cursor:'pointer'}} />
-            <img src={image3} style={{ flex: '1 1 30%', maxWidth: 'calc(33.33% - 12px)' }} />
-            <img src={image1} style={{ flex: '1 1 30%', maxWidth: 'calc(33.33% - 12px)' }} />
-            <img src={image5} style={{ flex: '1 1 30%', maxWidth: 'calc(33.33% - 12px)' }} />
-            <img src={image6} style={{ flex: '1 1 30%', maxWidth: 'calc(33.33% - 12px)' }} />
-          </div>
+          </Typography>
+          <Box
+            sx={{
+              width: '100%',
+              gap: '12px',
+              backgroundColor: '#15ff00',
+              display: 'flex',
+              flexWrap: 'wrap',
+              marginBottom: '16px',
+              marginTop: '20px',
+            }}
+          >
+            {[image1, image2, image3, image1, image5, image6,].map((image, index) => (
+              <Box
+                key={index}
+                sx={{
+                  flex: '1 1 30%',
+                  maxWidth: 'calc(33.33% - 12px)',
+                  padding: 0,
+                  cursor: 'pointer',
+                  '@media (max-width:600px)': {
+                    width: '99.33px',
+                    height: '99.33px',
+                    maxWidth: 'none',
+                    flex: 'none',
+                  },
+                }}
+              >
+                <Avatar
+                  variant="rounded"
+                  src={image}
+                  sx={{ width: '100%', height: '100%' }}
+                  onClick={openDialog}
+                />
+              </Box>
+            ))}
+          </Box>
 
-          <div style={{ display: 'flex', backgroundColor: '#FFFFFF', gap: '16px', height: '37px', alignItems: 'flex-start' }}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Box sx={{ display: 'flex', backgroundColor: '#FFFFFF', gap: '16px', height: '37px', alignItems: 'flex-start' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <img src={eye} />
-              <span style={{ fontFamily: 'Inter', fontWeight: '500', fontSize: '14px', lineHeight: '20px', letterSpacing: '-0.5px', color: '#7B7EA5' }}>
+              <Typography sx={{ fontFamily: 'Inter', fontWeight: '500', fontSize: '14px', lineHeight: '20px', letterSpacing: '-0.5px', color: '#7B7EA5', marginLeft:'6px' }}>
                 4.1 K
-              </span>
-            </div>
+              </Typography>
+            </Box>
 
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <img src={message} />
-              <span style={{ fontFamily: 'Inter', fontWeight: '500', fontSize: '14px', lineHeight: '20px', letterSpacing: '-0.5px', color: '#7B7EA5', marginLeft: '6px' }}>
+              <Typography sx={{ fontFamily: 'Inter', fontWeight: '500', fontSize: '14px', lineHeight: '20px', letterSpacing: '-0.5px', color: '#7B7EA5', marginLeft: '6px' }}>
                 0
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="dialogBox" style={{backgroundColor:'khaki', position:'relative', zIndex:'600'}}></div>
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+      <Box id="dialogBox" sx={{ backgroundColor: 'khaki', position: 'relative', zIndex: '600' }}></Box>
       {isDialogOpen && (
         <DialogBoxPhoto isOpen={isDialogOpen}>
-          <div style={{ width: '878px', height: '614px',  position:'relative', zIndex:'100' }}>
-          
-            
-         
-             
-           
-            <img onClick={closeDialog} src={xClose}  style={{width:'20px', height:'20px', cursor:'pointer', marginLeft:'590px'}}/>
-
-            
-           
-            
-            <div style={{display:'flex', flexDirection:'row', alignItems:'center', gap:'16px', justifyContent:'center'}} >
-              <div >
-                <img onClick={closeDialog} src={left} style={{cursor:'pointer'}} />
-              </div>
-              
-              <div>
-                <img src={run} style={{width:'500px', height:'450px', borderRadius:'10px'}} />
-              </div>
-              <div  style={{cursor:'pointer'}}>
-                <img src={rigth} style={{cursor:'pointer'}}/>
-              </div>
-            </div>
-          </div>
+          <Box sx={{ width: '878px', height: '614px', position: 'relative', zIndex: '100' }}>
+            <img onClick={closeDialog} src={xClose} style={{ width: '20px', height: '20px', cursor: 'pointer', marginLeft: '590px' }} />
+            <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '16px', justifyContent: 'center' }}>
+              <Box>
+                <img onClick={closeDialog} src={left} style={{ cursor: 'pointer' }} />
+              </Box>
+              <Box>
+                <img src={run} style={{ width: '500px', height: '450px', borderRadius: '10px' }} />
+              </Box>
+              <Box sx={{ cursor: 'pointer' }}>
+                <img src={rigth} style={{ cursor: 'pointer' }} />
+              </Box>
+            </Box>
+          </Box>
         </DialogBoxPhoto>
       )}
     </>
@@ -107,7 +128,3 @@ const {t} = useTranslation()
 };
 
 export default FotoGalery;
-
-
-
-

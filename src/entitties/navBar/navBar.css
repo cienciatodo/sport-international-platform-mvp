@@ -17,23 +17,10 @@
   color: #9395B8;
 }
 
-.navLetters{
-  font-family: 'Inter', sans-serif; /* Font */
-  color: #9395B8;
-  font-weight: 548;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: -0.5px;
-  text-align: center; /* Text alignment */
-  font-style: normal; /* Slant: 0, meaning no slant (not italic) */
 
 
-  
-  
-}
 
-.click{
- 
-  cursor: pointer;
-}
+
+
+
 

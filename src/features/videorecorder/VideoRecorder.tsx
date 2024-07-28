@@ -15,8 +15,8 @@ const VideoRecorder = () => {
 
   return (
     
-      <Box className="video-recorder-container">
-        <Box style={{paddingLeft: '20px'}}>
+      <Box className="video-recorder-container" sx={{ width: {sm:'765px', xs:'auto'} }} >
+        <Box sx={{paddingLeft: '20px',}}>
       <Box className="video-recorder-header" >
         <Typography variant="body2" className="header-text">
           {t("SportsWrestling")}
@@ -25,7 +25,7 @@ const VideoRecorder = () => {
           <img src={elipse} alt="Ellipse" />
         </Box>
         <Typography variant="body2" className="header-text">
-          12 марта, 2024 в 16:03
+          {t("date1")}
         </Typography>
       </Box>
       <Typography variant="h6" className="video-recorder-title" style={{fontSize:'20px', fontWeight:'600', marginBottom:'24px'}}>
@@ -33,9 +33,9 @@ const VideoRecorder = () => {
       </Typography>
       <Paper
         className="video-container"
-        style={{ backgroundImage: `url(${videoImage})` }}
+        sx={{ backgroundImage: `url(${videoImage})`, width:{sm:'725px', xs:'95%'}, height:{xs:'200px', sm:'400px'}}}
       >
-        <IconButton>
+        <IconButton >
           <img src={play1} alt="Play" />
         </IconButton>
       </Paper>

@@ -16,8 +16,10 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   RU: {
     translation: {
+      "News": "Первенство Московской области по спортивной борьбе (вольная борьба) среди юниоров до 24 лет",
       "PageFilter": "Фильтр ленты",
       "All": "Все",
+      
       "CompetitionResults": "Результаты соревнований",
       "Video": "Видео",
       "Achievements": "Достижения",
@@ -29,14 +31,18 @@ const resources = {
       "Romanov": "Романов",
       "FinalMatch": "Финальный матч - вольная борьба",
       "WatchLiveStream": "Смотреть трансляцию",
+      "coolNews": "Интересные подписки",
       
       ///////////////////////////////////////////
       "SportWrestling": "Спортивная Борьба",
+      "data":'2 Апреля, 14:00',
       "InterviewDate": "12 марта, 2024 в 16:03",
       "InterviewTitle": "Илья Бессонов дал интервью для телеканала Россия-1",
       "InterviewContent": "Илья Бессонов дал интервью после большого перерыва, где поделился секретом своего успеха и рассказал о методиках своих тренировок. Спортсмен сделал заявление, что возвращается в спорт и ...",
       "ReadMore": "Читать больше",
       "Views": "4.1 K",
+
+     
       
       "VadimDavydov": "Вадим Давыдов",
       "Comment1": "Наконец-то! Рад, что он вернулся в спорт",
@@ -64,6 +70,7 @@ const resources = {
       "CongratulatedBy": "Дмитрий Зайцев ",
       "moreCongrats": "и еще 500 человек поздравили",
       "Congratulate": "Поздравить",
+      "lastNews": "Последние новости",
       
       //////////////////////////////////////////
       "Cycling": "Велоспорт",
@@ -90,14 +97,19 @@ const resources = {
       "VideosLabel": "Видео",
       "AchievementsLabel": "Достижения",
       "FeedLabel": "лента",
+      "Competition": "Cоревнования",
       "MarketplaceLabel": "Маркетплейс",
       "RatingLabel": "Рейтинг",
       "OrganizationsLabel": "Организации",
-      "LiveLabel": "Live"
+      "LiveLabel": "Live",
+      "subscribe":"Подписаться",
+      "date1":"12 марта, 2024 в 16:03"
+     
     }
   },
   EN: {
     translation: {
+      "News": "Moscow Region Championship in Wrestling (Freestyle Wrestling) among Juniors Under 24",
       "PageFilter": "Feed Filter",
       "All": "All",
       "CompetitionResults": "Competition Results",
@@ -105,6 +117,8 @@ const resources = {
       "Achievements": "Achievements",
       
       "Matveev": "Matveev",
+      "data":'2 April, 14:00',   
+     "coolNews": "Interesting subscriptions",
       
       /////////////////////////////
       "Romanov": "Romanov",
@@ -148,6 +162,7 @@ const resources = {
       
       //////////////////////////////////////////
       "Cycling": "Cycling",
+     "lastNews": "Last News",
       "EventDategeneral": "February 2, 2024 at 23:09",
       "TourStages": "Tour of the Alps 2024 Stages",
       "CompetitionPhotos": "Competition Photos",
@@ -175,24 +190,33 @@ const resources = {
       "RatingLabel": "Rating",
       "OrganizationsLabel": "Organizations",
       "LiveLabel": "Live",
-      "ads": "Your advertisment could be here"
+      "ads": "Your advertisment could be here",
+      "subscribe":"Subscribe",
+      "date1":"12 марта, 2024 в 16:03"
     }
   },
   CN: {
     translation: {
+      "subscribe":"訂閱",
+      "lastNews":"最新消息",
+      "News": "莫斯科地區 24 歲以下青少年摔角錦標賽（自由式摔角）",
       "PageFilter": "内容筛选",
       "All": "全部",
       "CompetitionResults": "比赛结果",
       "ads":"您的廣告可能在這裡",
       "Video": "视频",
       "Achievements": "成就",
+      "coolNews": "有趣的訂閱",
       
       "Matveev": "马特维耶夫",
+      "data":'2 週六，14:00',
+     "date1":"2024 年 5 月 12 日 16:03",
       
       /////////////////////////////
       "Romanov": "罗曼诺夫",
       "FinalMatch": "决赛 - 自由式摔跤",
       "WatchLiveStream": "观看直播",
+      "Competition": "比賽",
       
       ///////////////////////////////////////////
       "SportWrestling": "体育摔跤",

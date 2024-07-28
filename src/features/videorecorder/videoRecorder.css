@@ -21,7 +21,7 @@
   margin-bottom: 12px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  padding-left: 20px;
+  padding-left: 0px;
   padding-top: 28px;
   
  
@@ -32,6 +32,8 @@
   font-weight: 400;
   font-size: 12px;
   color: #9395B8;
+
+  
 }
 
 .header-icon {
@@ -53,6 +55,7 @@
   font-size: 20px;
   line-height: 26px;
   letter-spacing: -0.7px;
+
 
 }
 

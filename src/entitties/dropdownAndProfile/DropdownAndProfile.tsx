@@ -12,8 +12,8 @@ import { useTranslation } from 'react-i18next';
 
 const DropdownAndProfile = () => {
   const { i18n } = useTranslation();
- const [language, setLanguage] = useState('RU');
-  const [open, setOpen] = useState(false);
+ const [language, setLanguage] = useState<string>('RU');
+  const [open, setOpen] = useState<boolean>(false);
 
 
 
@@ -37,7 +37,8 @@ const DropdownAndProfile = () => {
         <Avatar src={currentLanguage === 'RU' ? russianFlag : currentLanguage === 'EN' ? enflag : ch} sx={{ width: 20, height: 16, mr: 1, borderRadius:'4px' }} />
         {
           currentLanguage === 'RU' || currentLanguage === 'EN' 
-          ?  <img src={currentLanguage === 'RU' ? lettersRU : currentLanguage === 'EN' ? enletters : 'CN'} alt="Language" style={{ width: 19, height: 20, marginRight: '5px' }} /> : <Typography style={{fontFamily:'Inter', fontWeight:'600', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#01010d' }}>CN</Typography>
+          ?  <img src={currentLanguage === 'RU' ? lettersRU : currentLanguage === 'EN' ? enletters : 'CN'} alt="Language" style={{ width: 19, height: 20, marginRight: '5px' }} />
+          : <Typography style={{fontFamily:'Inter', fontWeight:'600', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#01010d' }}>CN</Typography>
         }
        
         <IconButton>

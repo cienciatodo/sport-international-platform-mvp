@@ -14,6 +14,7 @@ import russianFlag from '../../../public/icons/navigation/russianFlag.svg'
 import { useRef, useState, MouseEvent, useEffect } from 'react'
 import Points from '../../entitties/points/Points'
 import { useTranslation } from 'react-i18next'
+import { Hidden } from '@mui/material'
 
 const Banner = () => {
 
@@ -120,6 +121,7 @@ const Banner = () => {
 
   return(
     <>
+    <Hidden smDown>
     <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
 
       <div  ref={containerRef}
@@ -132,7 +134,8 @@ const Banner = () => {
           width: '1160px',
           overflow: 'hidden',
           cursor: 'grab',
-          backgroundColor:'#f5f1f7'
+          backgroundColor:'#f5f1f7',
+          borderRadius:'20px'
         }}>
         <div style={{ display: 'flex', width: '2600px'}}>
 
@@ -140,14 +143,14 @@ const Banner = () => {
 
 
 
-        <div draggable="false" onDragStart={preventDragHandler}  className="banner">
+        <div draggable="false" onDragStart={preventDragHandler}  className="banner" >
    
    <div className='letterBanner'>
-     <img src={letterBanner}/>
+     <img src={letterBanner}  />
    </div>
    <div style={{display: 'flex' , flexDirection:'row', position: 'relative', top:'-204px', justifyContent:'space-between'}}>
    <div>
-     <img src={personLeft}/>
+     <img src={personLeft} style={{borderBottomLeftRadius:'16px'}}/>
    </div>
    
    <div style={{position:'relative' , width: '520px', height:'250px', gap:'16px', display:'flex',flexDirection:'column', marginTop:'35px'}}>
@@ -202,7 +205,7 @@ const Banner = () => {
     
    </div>
    <div >
-     <img src={personRight}/>
+     <img src={personRight} style={{borderBottomRightRadius:'16px'}}/>
    </div>     
    </div>
   
@@ -389,6 +392,8 @@ const Banner = () => {
    
 
     </div>
+
+    </Hidden>
    
 
 
