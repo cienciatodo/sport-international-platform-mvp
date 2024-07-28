@@ -16,6 +16,7 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   RU: {
     translation: {
+      "galery": "Фотографии в посте",
       "News": "Первенство Московской области по спортивной борьбе (вольная борьба) среди юниоров до 24 лет",
       "PageFilter": "Фильтр ленты",
       "All": "Все",
@@ -109,6 +110,7 @@ const resources = {
   },
   EN: {
     translation: {
+      "galery": "Photos in the post",
       "News": "Moscow Region Championship in Wrestling (Freestyle Wrestling) among Juniors Under 24",
       "PageFilter": "Feed Filter",
       "All": "All",
@@ -197,6 +199,7 @@ const resources = {
   },
   CN: {
     translation: {
+      "galery": "貼文中的照片",
       "subscribe":"訂閱",
       "lastNews":"最新消息",
       "News": "莫斯科地區 24 歲以下青少年摔角錦標賽（自由式摔角）",

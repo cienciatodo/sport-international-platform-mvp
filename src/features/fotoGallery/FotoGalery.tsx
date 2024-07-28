@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 import elipse from '../../../public/images/Banner/letters/Ellipse 27137.svg';
 import image1 from '../../../public/icons/navigation/fotoa.png';
 import image2 from '../../../public/icons/navigation/fotob.png';
@@ -7,27 +7,22 @@ import eye from '../../../public/icons/navigation/eye.svg';
 import image5 from '../../../public/icons/navigation/fotoe.png';
 import image6 from '../../../public/icons/navigation/fotof.png';
 import message from '../../../public/icons/navigation/message-square-02.svg';
-import DialogBoxPhoto from '../../entitties/dialogBoxFoto/DialogBoxPhoto';
-import left from '../../../public/icons/navigation/leftbutton.svg';
-import rigth from '../../../public/icons/navigation/rigthButton.svg';
-import run from '../../../public/icons/navigation/great1.png';
-
-import xClose from '../../../public/icons/navigation/x-close.svg'
 import { useTranslation } from 'react-i18next';
-import { Avatar, Box, IconButton, Typography } from '@mui/material';
+import { Avatar, Box, Typography } from '@mui/material';
+import { Navigate, useMatch, useNavigate } from 'react-router-dom';
 
-const FotoGalery = () => {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-
-  const openDialog = () => {
-    setIsDialogOpen(true);
-  };
-
-  const closeDialog = () => {
-    setIsDialogOpen(false);
-  };
-  
+const FotoGalery: React.FC = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const match  = useMatch('/photos')
+
+  const handleClickPhoto = (path: string): void => {
+    console.log(13+16)
+    console.log(match ? 'yes' : 'no')
+    navigate(path);
+  };
+
+
 
   return (
     <>
@@ -61,7 +56,7 @@ const FotoGalery = () => {
               marginTop: '20px',
             }}
           >
-            {[image1, image2, image3, image1, image5, image6,].map((image, index) => (
+            {[image1, image2, image3, image1, image5, image6].map((image, index) => (
               <Box
                 key={index}
                 sx={{
@@ -78,10 +73,13 @@ const FotoGalery = () => {
                 }}
               >
                 <Avatar
+                  
                   variant="rounded"
+                 
+                  
                   src={image}
                   sx={{ width: '100%', height: '100%' }}
-                  onClick={openDialog}
+                  onClick={() => handleClickPhoto('photos')}
                 />
               </Box>
             ))}
@@ -104,25 +102,6 @@ const FotoGalery = () => {
           </Box>
         </Box>
       </Box>
-      <Box id="dialogBox" sx={{ backgroundColor: 'khaki', position: 'relative', zIndex: '600' }}></Box>
-      {isDialogOpen && (
-        <DialogBoxPhoto isOpen={isDialogOpen}>
-          <Box sx={{ width: '878px', height: '614px', position: 'relative', zIndex: '100' }}>
-            <img onClick={closeDialog} src={xClose} style={{ width: '20px', height: '20px', cursor: 'pointer', marginLeft: '590px' }} />
-            <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '16px', justifyContent: 'center' }}>
-              <Box>
-                <img onClick={closeDialog} src={left} style={{ cursor: 'pointer' }} />
-              </Box>
-              <Box>
-                <img src={run} style={{ width: '500px', height: '450px', borderRadius: '10px' }} />
-              </Box>
-              <Box sx={{ cursor: 'pointer' }}>
-                <img src={rigth} style={{ cursor: 'pointer' }} />
-              </Box>
-            </Box>
-          </Box>
-        </DialogBoxPhoto>
-      )}
     </>
   );
 };
