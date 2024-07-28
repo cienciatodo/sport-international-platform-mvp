@@ -49,7 +49,7 @@ const Default = () => {
             width: { xs: '100%', sm: 'auto' },
             marginTop:{xs:'80px', sm:'0px'},
 
-            backgroundColor:{sm:'red', xs:'purple'},
+           
             display:{xs:'flex'},
             flexDirection:{xs:'column'},
 

@@ -19,13 +19,13 @@ const Notification = () => {
           {t("EventDate")}
         </Typography>
         <Box sx={{marginTop:'12px'}}>
-          <Box sx={{display:'flex', flexDirection:'row', backgroundColor:'#ff0000', width:{sm:'725px', xs:'auto'},  marginBottom:'16px',justifyContent:'space-between' }}>
+          <Box sx={{display:'flex', flexDirection:'row', backgroundColor:'white', width:{sm:'725px', xs:'auto'},  marginBottom:'16px',justifyContent:'space-between' }}>
             <Box sx={{display:'flex'}}>
             <Box >
             <img src={sportman} />
             <Box component="img" src={russia} sx={{borderRadius:'100px', position:'relative',left:{sm:'-15.45px', xs:'-15.45px'}, border:'solid', borderWidth:'2px', borderColor:'#FFFFFF', top:{sm:'0px', xs:'-0px'}}}/>
             </Box>
-            <Box sx={{backgroundColor:'yellowgreen', overflow:'hidden', whiteSpace:'nowrap',  width:{xs:'190px', sm:'auto'}}}>
+            <Box sx={{backgroundColor:'white', overflow:'hidden', whiteSpace:'nowrap',  width:{xs:'190px', sm:'auto'}}}>
               <Typography  sx={{color:'#06082C',fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', }}>
               {t("AthleteName")}
               </Typography>
@@ -53,7 +53,7 @@ const Notification = () => {
           </Box>         
         </Box>
         <Box>
-          <Box sx={{display:'flex', flexDirection:'column', alignItems:'center',  width: {sm:'725px', xs:'auto'}, backgroundColor:'#0000fe', marginBottom:'16px', borderRadius:'12px'}}>
+          <Box sx={{display:'flex', flexDirection:'column', alignItems:'center',  width: {sm:'725px', xs:'auto'}, backgroundColor:'#F8F8F9', marginBottom:'16px', borderRadius:'12px'}}>
             <Box sx={{marginBottom:'16px'}}>
               <img src={goldIcon}/>
 
@@ -61,13 +61,13 @@ const Notification = () => {
             <Typography  sx={{color:'#06082C',fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', marginBottom:'8px'}}>
               {t("Placement")}
             </Typography>
-            <Typography sx={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'18px', color:'#9395B8',marginBottom:'16px', textAlign:'center', backgroundColor:'khaki'}}>
+            <Typography sx={{fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'18px', color:'#9395B8',marginBottom:'16px', textAlign:'center'}}>
              {t("EventDetails")}
             </Typography>
           </Box>
         </Box>
-        <Box sx={{backgroundColor:'#00d9ff' , whiteSpace:"nowrap", overflow:'hidden', textOverflow:'ellipsis'}}>
-          <Box sx={{display:'flex', width:'348px', marginBottom:'20px', backgroundColor:"salmon"}}>
+        <Box sx={{backgroundColor:'white' , whiteSpace:"nowrap", overflow:'hidden', textOverflow:'ellipsis'}}>
+          <Box sx={{display:'flex', width:'348px', marginBottom:'20px', backgroundColor:"white"}}>
             <Box component="img" src={profilepicture} sx={{marginRight:'6px'}}/>
             <Typography sx={{fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#06082C'}}>
               {t("CongratulatedBy")}

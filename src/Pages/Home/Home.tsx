@@ -4,7 +4,7 @@ import backIcon from '../../../public/icons/navigation/back.svg'
 
 import image1 from '../../../public/icons/navigation/fotoe.png'
 import { useNavigate } from "react-router-dom"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import DialogBoxPhoto from "../../entitties/dialogBoxFoto/DialogBoxPhoto"
 import xclose from '../../../public/icons/navigation/x-close.svg'
 import right from '../../../public/icons/navigation/rigthButton.svg'
@@ -23,6 +23,11 @@ const closeDialog = () => {
 
 
   const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior:"instant" });
+
+  }, [])
 
 const {t} =useTranslation()
   return(

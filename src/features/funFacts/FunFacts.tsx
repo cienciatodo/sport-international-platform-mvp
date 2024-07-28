@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material"
+import { Box,  Typography } from "@mui/material"
 import { useTranslation } from "react-i18next"
 import perfil from '../../../public/icons/navigation/amor.svg'
 import flag from '../../../public/icons/navigation/terreno.svg'

@@ -9,16 +9,15 @@ import image6 from '../../../public/icons/navigation/fotof.png';
 import message from '../../../public/icons/navigation/message-square-02.svg';
 import { useTranslation } from 'react-i18next';
 import { Avatar, Box, Typography } from '@mui/material';
-import { Navigate, useMatch, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 const FotoGalery: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const match  = useMatch('/photos')
+
 
   const handleClickPhoto = (path: string): void => {
-    console.log(13+16)
-    console.log(match ? 'yes' : 'no')
+
     navigate(path);
   };
 
@@ -26,7 +25,7 @@ const FotoGalery: React.FC = () => {
 
   return (
     <>
-      <Box sx={{ width: { sm: '765px', xs: 'auto' }, backgroundColor: '#ff0000', borderRadius: '20px' }}>
+      <Box sx={{ width: { sm: '765px', xs: 'auto' }, backgroundColor: 'white', borderRadius: '20px' }}>
         <Box sx={{ padding: '20px' }}>
           <Box sx={{ display: 'flex', flexDirection: 'row', gap: '6px', backgroundColor: '#FFFFFF', marginBottom: '12px' }}>
             <Typography sx={{ fontFamily: 'Inter', fontWeight: '400', fontSize: '12px', color: '#9395B8' }}>
@@ -42,14 +41,14 @@ const FotoGalery: React.FC = () => {
           <Typography sx={{ fontFamily: 'Inter', fontWeight: '600', fontSize: '20px', lineHeight: '26px', letterSpacing: '-0.7px' }}>
             {t("TourStages")}
           </Typography>
-          <Typography sx={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '14px', lineHeight: '20px', letterSpacing: '-0.5px' }}>
+          <Typography sx={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '14px', lineHeight: '20px', letterSpacing: '-0.5px', marginTop:'20px' }}>
             {t("CompetitionPhotos")}
           </Typography>
           <Box
             sx={{
               width: '100%',
               gap: '12px',
-              backgroundColor: '#15ff00',
+              backgroundColor: 'white',
               display: 'flex',
               flexWrap: 'wrap',
               marginBottom: '16px',

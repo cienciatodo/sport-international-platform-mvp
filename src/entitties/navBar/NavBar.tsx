@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo from '../logo/Logo';
 import './navBar.css';
 import { useTranslation } from 'react-i18next';
@@ -9,53 +8,71 @@ import { Hidden } from '@mui/material';
 const NavBar = () => {
   const { t } = useTranslation();
 
-  const marketList = ['About', 'Our History', 'Headquarter', 'Best Cases'];
-  const profileList = ['information 1', 'information 2', 'information 3', 'information 4', 'information 5'];
-  const competitionsList = [
-    'Premier League',
-    'FIFA World Cup',
-    'UEFA Champions League',
-    'NBA Finals',
-    'Wimbledon',
-    'Super Bowl',
-    'The Masters',
-    'Tour de France',
-    'Formula 1 World Championship',
-    'Cricket World Cup'
+
+  
+
+  const marketListKeys = [
+    "marketAbout",
+    "marketOurHistory",
+    "marketHeadquarter",
+    "marketBestCases"
   ];
 
-  const feedList = [
-    'Latest News',
-    'Match Reports',
-    'Player Interviews',
-    'Team Updates',
-    'Injury Updates',
-    'Transfer News',
-    'Game Recaps',
-    'Fan Posts',
-    'Opinion Articles',
-    'Video Highlights'
+  const feedListKeys = [
+    "feedLatestNews",
+    "feedMatchReports",
+    "feedPlayerInterviews",
+    "feedTeamUpdates",
+    "feedInjuryUpdates",
+    "feedTransferNews",
+    "feedGameRecaps",
+    "feedFanPosts",
+    "feedOpinionArticles",
+    "feedVideoHighlights"
   ];
 
-  const liveList = [
-    'Live Match Scores',
-    'Live Commentary',
-    'Live Streaming',
-    'Live Player Stats',
-    'Live Game Highlights',
-    'Live Fan Reactions',
-    'Live Updates',
-    'Live Team Stats',
-    'Live Interviews',
-    'Live Event Schedules'
+  const profileListKeys = [
+    "profileInfo1",
+    "profileInfo2",
+    "profileInfo3",
+    "profileInfo4",
+    "profileInfo5"
   ];
 
-  const organizationList = [
-    'International Olympic Committee (IOC)',
-    'NHL (National Hockey League)',
-    'ICC (International Cricket Council)',
-    'ATP (Association of Tennis Professionals)',
+  const competitionsListKeys = [
+    "competitionPremierLeague",
+    "competitionWorldCup",
+    "competitionUCL",
+    "competitionNBAFinals",
+    "competitionWimbledon",
+    "competitionSuperBowl",
+    "competitionTheMasters",
+    "competitionTourDeFrance",
+    "competitionF1",
+    "competitionCWC"
   ];
+
+  const organizationListKeys = [
+    "organizationCInternational",
+    "organizationNHL",
+    "organizationICC",
+    "organizationATP"
+  ];
+  
+  const liveListKeys = [
+    "liveMatch",
+    "livePress",
+    "liveStreaming",
+    "livePlayer",
+    "liveGame",
+    "liveFan",
+    "liveUpdates",
+    "liveTeamStats",
+    "liveInterviews",
+    "liveEvent"
+  ];
+  
+  
 
   return (
     <>
@@ -63,12 +80,12 @@ const NavBar = () => {
         <Logo />
         <Hidden smDown>
           <div style={{ display: 'flex', gap: '16px' }}>
-            <SingleNavBarElement svgPath={house} innerText={t('FeedLabel')} className='bag' OptionDropdownList={feedList} />
-            <SingleNavBarElement svgPath={bag} innerText={t("MarketplaceLabel")} className='bag' OptionDropdownList={marketList} />
-            <SingleNavBarElement svgPath={people} innerText={t("RatingLabel")} className='bag' OptionDropdownList={profileList} />
-            <SingleNavBarElement svgPath={trophy} innerText={t("Competition")} className='bag' OptionDropdownList={competitionsList} />
-            <SingleNavBarElement svgPath={bank} innerText={t("OrganizationsLabel")} className='bag' OptionDropdownList={organizationList} />
-            <SingleNavBarElement svgPath={network} innerText={t("LiveLabel")} className='bag' OptionDropdownList={liveList} />
+            <SingleNavBarElement svgPath={house} innerText={t('FeedLabel')} className='bag' OptionDropdownList={feedListKeys} />
+            <SingleNavBarElement svgPath={bag} innerText={t("MarketplaceLabel")} className='bag' OptionDropdownList={marketListKeys} />
+            <SingleNavBarElement svgPath={people} innerText={t("RatingLabel")} className='bag' OptionDropdownList={profileListKeys} />
+            <SingleNavBarElement svgPath={trophy} innerText={t("Competition")} className='bag' OptionDropdownList={competitionsListKeys} />
+            <SingleNavBarElement svgPath={bank} innerText={t("OrganizationsLabel")} className='bag' OptionDropdownList={organizationListKeys} />
+            <SingleNavBarElement svgPath={network} innerText={t("LiveLabel")} className='bag' OptionDropdownList={liveListKeys} />
           </div>
         </Hidden>
       </div>

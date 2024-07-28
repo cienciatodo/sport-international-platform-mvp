@@ -73,7 +73,7 @@ const MainContentSection2 = () => {
         <Box className="champions-img" sx={{}}>
           <Box component="img" src={champions} alt="Champions" sx={{width:{sm:'600px', xs: '303px'}, marginLeft:{xs:'-85px', sm:'0px'}, marginTop:{xs:'-30px'}}}/>
         </Box>
-        <Typography className="moments-title" sx={{fontFamily:'Inter', fontSize:'14px', fontWeight:'500',lineHeight:'20px', letterSpacing:'-0.5px',backgroundColor:'red' }}>{t("BestMoments")}</Typography>
+        <Typography className="moments-title" sx={{fontFamily:'Inter', fontSize:'14px', fontWeight:'500',lineHeight:'20px', letterSpacing:'-0.5px',backgroundColor:'white' }}>{t("BestMoments")}</Typography>
         <div
           ref={containerRef}
           onMouseDown={mouseGrab}
@@ -280,7 +280,7 @@ const MainContentSection2 = () => {
 
 
         </div>
-        <Button sx={{textTransform:'none',borderRadius:'10px',cursor:'pointer', backgroundColor:'#EEF0F7', color:'#06082C', fontFamily:'Inter', width:{xs:'100%', sm:'auto'}}} className="view-all-button" >{t("ViewAll")}</Button>
+        <Button sx={{textTransform:'none',borderRadius:'10px',cursor:'pointer', backgroundColor:'#EEF0F7', color:'#06082C', fontFamily:'Inter', width:{xs:'100%', sm:'auto'}, fontWeight:'548', lineHeight:'20px', letterSpacing:'-0.5px', }} className="view-all-button" >{t("ViewAll")}</Button>
       </Box>
     </Box>
   );

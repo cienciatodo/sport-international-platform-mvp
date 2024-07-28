@@ -10,7 +10,7 @@ const LastNews = () => {
 
   return(
     <>
-    <Box sx={{width:['auto','371px'], backgroundColor:'white',height:'595px', borderRadius:'20px'}}>
+    <Box sx={{width:['auto','371px'], backgroundColor:'white',height:'595px', borderRadius:'20px', marginBottom:'20px'}}>
       <Box sx={{ paddingTop:'24px', paddingBottom:'24px', paddingLeft:'20px', paddingRight:'20px'}}>
 
       <Typography sx={{fontFamily:'Inter' , fontSize:'20px', fontWeight:'600', lineHeight:'26px', letterSpacing:'-0.7px', color:'#06082C', marginBottom:'24px'}}>

@@ -16,6 +16,60 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   RU: {
     translation: {
+      "marketAbout": "О нас",
+      "marketOurHistory": "Наша история",
+      "marketHeadquarter": "Штаб-квартира",
+      "marketBestCases": "Лучшие случаи",
+
+      // Profile List
+      "profileInfo1": "информация wc 1",
+      "profileInfo2": "информация wc 2",
+      "profileInfo3": "информация wc 3",
+      "profileInfo4": "информация wc 4",
+      "profileInfo5": "информация wc 5",
+
+      // Competitions List
+      "competitionPremierLeague": "Премьер-лига",
+      "competitionWorldCup": "Чемпионат мира",
+      "competitionUCL": "ЛЧ",
+      "competitionNBAFinals": "Финалы НБА",
+      "competitionWimbledon": "Уимблдон",
+      "competitionSuperBowl": "Суперкубок",
+      "competitionTheMasters": "Мастерс",
+      "competitionTourDeFrance": "Тур де Франс",
+      "competitionF1": "Формула-1",
+      "competitionCWC": "Клубный чемпионат мира",
+
+      // Feed List
+      "feedLatestNews": "Последние новости",
+      "feedMatchReports": "Отчеты о матчах",
+      "feedPlayerInterviews": "Интервью с игроками",
+      "feedTeamUpdates": "Обновления команды",
+      "feedInjuryUpdates": "Обновления о травмах",
+      "feedTransferNews": "Новости о трансферах",
+      "feedGameRecaps": "Обзор игр",
+      "feedFanPosts": "Публикации фанатов",
+      "feedOpinionArticles": "Статьи мнений",
+      "feedVideoHighlights": "Видеовыдержки",
+
+      // Live List
+      "liveMatch": "Матч в прямом эфире",
+      "livePress": "Пресс-конференция в прямом эфире",
+      "liveStreaming": "Трансляция в прямом эфире",
+      "livePlayer": "Игрок в прямом эфире",
+      "liveGame": "Игра в прямом эфире",
+      "liveFan": "Фанаты в прямом эфире",
+      "liveUpdates": "Обновления в прямом эфире",
+      "liveTeamStats": "Статистика команды в прямом эфире",
+      "liveInterviews": "Интервью в прямом эфире",
+      "liveEvent": "Событие в прямом эфире",
+
+      // Organization List
+      "organizationCInternational": "C International",
+      "organizationNHL": "НХЛ",
+      "organizationICC": "ICC",
+      "organizationATP": "АТР",
+      
       "galery": "Фотографии в посте",
       "News": "Первенство Московской области по спортивной борьбе (вольная борьба) среди юниоров до 24 лет",
       "PageFilter": "Фильтр ленты",
@@ -110,6 +164,59 @@ const resources = {
   },
   EN: {
     translation: {
+      "marketAbout": "About",
+      "marketOurHistory": "Our History",
+      "marketHeadquarter": "Headquarter",
+      "marketBestCases": "Best Cases",
+
+      // Profile List
+      "profileInfo1": "information wc 1",
+      "profileInfo2": "information wc 2",
+      "profileInfo3": "information wc 3",
+      "profileInfo4": "information wc 4",
+      "profileInfo5": "information wc 5",
+
+      // Competitions List
+      "competitionPremierLeague": "Premier League",
+      "competitionWorldCup": "World Cup",
+      "competitionUCL": "UCL",
+      "competitionNBAFinals": "NBA Finals",
+      "competitionWimbledon": "Wimbledon",
+      "competitionSuperBowl": "Super Bowl",
+      "competitionTheMasters": "The Masters",
+      "competitionTourDeFrance": "Tour de France",
+      "competitionF1": "F1",
+      "competitionCWC": "CWC",
+
+      // Feed List
+      "feedLatestNews": "Latest News",
+      "feedMatchReports": "Match Reports",
+      "feedPlayerInterviews": "Player Interviews",
+      "feedTeamUpdates": "Team Updates",
+      "feedInjuryUpdates": "Injury Updates",
+      "feedTransferNews": "Transfer News",
+      "feedGameRecaps": "Game Recaps",
+      "feedFanPosts": "Fan Posts",
+      "feedOpinionArticles": "Opinion Articles",
+      "feedVideoHighlights": "Video Highlights",
+
+      // Live List
+      "liveMatch": "Live Match",
+      "livePress": "Live Press",
+      "liveStreaming": "Live Streaming",
+      "livePlayer": "Live Player",
+      "liveGame": "Live Game",
+      "liveFan": "Live Fan",
+      "liveUpdates": "Live Updates",
+      "liveTeamStats": "Live Team Stats",
+      "liveInterviews": "Live Interviews",
+      "liveEvent": "Live Event",
+
+      // Organization List
+      "organizationCInternational": "C International",
+      "organizationNHL": "NHL",
+      "organizationICC": "ICC",
+      "organizationATP": "ATP",
       "galery": "Photos in the post",
       "News": "Moscow Region Championship in Wrestling (Freestyle Wrestling) among Juniors Under 24",
       "PageFilter": "Feed Filter",
@@ -199,6 +306,60 @@ const resources = {
   },
   CN: {
     translation: {
+      "marketAbout": "关于",
+      "marketOurHistory": "我们的历史",
+      "marketHeadquarter": "总部",
+      "marketBestCases": "最佳案例",
+
+      // Profile List
+      "profileInfo1": "信息 wc 1",
+      "profileInfo2": "信息 wc 2",
+      "profileInfo3": "信息 wc 3",
+      "profileInfo4": "信息 wc 4",
+      "profileInfo5": "信息 wc 5",
+
+      // Competitions List
+      "competitionPremierLeague": "英超联赛",
+      "competitionWorldCup": "世界杯",
+      "competitionUCL": "欧冠",
+      "competitionNBAFinals": "NBA总决赛",
+      "competitionWimbledon": "温布尔登",
+      "competitionSuperBowl": "超级碗",
+      "competitionTheMasters": "大师赛",
+      "competitionTourDeFrance": "环法自行车赛",
+      "competitionF1": "一级方程式",
+      "competitionCWC": "世俱杯",
+
+      // Feed List
+      "feedLatestNews": "最新消息",
+      "feedMatchReports": "比赛报告",
+      "feedPlayerInterviews": "球员采访",
+      "feedTeamUpdates": "团队更新",
+      "feedInjuryUpdates": "伤病更新",
+      "feedTransferNews": "转会新闻",
+      "feedGameRecaps": "比赛回顾",
+      "feedFanPosts": "粉丝帖子",
+      "feedOpinionArticles": "意见文章",
+      "feedVideoHighlights": "视频集锦",
+
+      // Live List
+      "liveMatch": "直播比赛",
+      "livePress": "直播新闻发布会",
+      "liveStreaming": "直播流媒体",
+      "livePlayer": "直播球员",
+      "liveGame": "直播游戏",
+      "liveFan": "直播粉丝",
+      "liveUpdates": "直播更新",
+      "liveTeamStats": "直播球队统计",
+      "liveInterviews": "直播采访",
+      "liveEvent": "直播活动",
+
+      // Organization List
+      "organizationCInternational": "C International",
+      "organizationNHL": "NHL",
+      "organizationICC": "ICC",
+      "organizationATP": "ATP",
+      "About": "關於我們",
       "galery": "貼文中的照片",
       "subscribe":"訂閱",
       "lastNews":"最新消息",

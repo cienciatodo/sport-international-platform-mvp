@@ -1,6 +1,7 @@
 import { FC, useRef, useState } from "react";
 import './singleNavBarElement.css';
 import { Box, MenuItem, Select } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 interface PropSingleNavBarElement {
   innerText?: string;
@@ -35,6 +36,8 @@ const SingleNavBarElement: FC<PropSingleNavBarElement> = ({
     buttonRef.current?.focus()
     console.log('golo')
   }
+
+  const {t} =useTranslation()
 
   return (
     <Box>
@@ -91,7 +94,7 @@ const SingleNavBarElement: FC<PropSingleNavBarElement> = ({
         {OptionDropdownList?.map((value) => {
           return <MenuItem > 
           <Box display="flex" alignItems="center">
-          <span className="navLetters">{value}</span>
+          <span className="navLetters">{t(`${value}`)}</span>
          </Box>
          </MenuItem>
         })}

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Box, Typography, Button, Divider, Avatar, Grid } from '@mui/material';
 import elipse from '../../../public/images/Banner/letters/Ellipse 27137.svg';
 import boxer1 from '../../../public/images/boxer/image1.png';
@@ -12,13 +12,13 @@ import message from '../../../public/icons/navigation/message-square-02.svg';
 import profile1 from '../../../public/icons/navigation/faceProfile1.svg';
 import profile2 from '../../../public/icons/navigation/profile3.svg';
 import { useTranslation } from 'react-i18next';
-import { red } from '@mui/material/colors';
+
 
 const MainContentSection1 = () => {
   const { t } = useTranslation();
 
   return (
-    <Box sx={{ padding: '28px 20px', backgroundColor: '#FFFFFF', width: {sm:'725px', xs:'auto'}, borderRadius: '20px' }}>
+    <Box sx={{ padding: '28px 20px', backgroundColor: '#FFFFFF', width: {sm:'725px', xs:'auto'}, borderRadius: '20px', marginBottom:{xs:'20px'}, }}>
       <Box>
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '12px' }}>
@@ -35,7 +35,7 @@ const MainContentSection1 = () => {
           <Typography variant="h6" sx={{ marginBottom: '20px', fontFamily:'Inter', fontWeight:'600', fontSize:"20px",lineHeight:'26px', letterSpacing:"-0.7px" }}>
             {t("InterviewTitle")}
           </Typography>
-          <Typography variant="body1" sx={{ marginBottom: '20px', fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#7B7EA5', backgroundColor:'red' }}>
+          <Typography variant="body1" sx={{ marginBottom: '20px', fontFamily:'Inter', fontWeight:'500', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px', color:'#7B7EA5', backgroundColor:'white' }}>
             {t("InterviewContent")}
             <Button variant="text" sx={{ padding: 0, minWidth: 'auto' , color:'#353754', fontFamily:'Inter', fontWeight:'548', fontSize:'14px', lineHeight:'20px', letterSpacing:'-0.5px' }}>
               {t("ReadMore")}

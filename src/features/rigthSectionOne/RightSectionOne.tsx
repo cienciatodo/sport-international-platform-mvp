@@ -19,7 +19,7 @@ const RightSectionOne = () => {
 
 
     <>
-            <div style={{backgroundColor:"firebrick", width:'auto', height:'245px', borderRadius:'20px', paddingTop:'24px', paddingBottom:'24px', paddingLeft:'20px', paddingRight:'20px', marginBottom:'24px' }}>
+            <div style={{backgroundColor:"white", width:'auto', height:'245px', borderRadius:'20px', paddingTop:'24px', paddingBottom:'24px', paddingLeft:'20px', paddingRight:'20px', marginBottom:'24px' }}>
 
       
 <span style={{fontFamily:'Inter', fontWeight:'600', fontSize:'20px', lineHeight:'26px', letterSpacing:'-0.7px', }}>          
