@@ -34,6 +34,7 @@ const {t} =useTranslation()
     <>
     <Box sx={{backgroundColor:'#f5f1f7', marginTop:'64px', paddingLeft:{sm:'140px'}, paddingRight:{sm:'140px'},paddingTop:{sm:'24px'} }}>
       <Box >
+        
 
       
       <Box sx={{width:'40px', height:'40px', padding:{sm:'10px 24px'}}}>
