@@ -11,8 +11,6 @@ const DialogBoxPhoto: FC<PropsDialog> = ({ children, isOpen }) => {
 
   if (!dialogBoxElement || !isOpen) return null;
 
-  console.log(isOpen, 'estou aberto')
-
   return createPortal(
     <div style={overlayStyle}>
       <div style={dialogStyle}>

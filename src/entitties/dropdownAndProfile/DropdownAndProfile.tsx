@@ -50,6 +50,7 @@ const DropdownAndProfile = () => {
         value={currentLanguage}
         onChange={handleChange}
         open={open}
+        
         onClose={() => setOpen(false)}
         displayEmpty
         inputProps={{ 'aria-label': 'Without label' }}
